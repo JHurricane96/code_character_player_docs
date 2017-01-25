@@ -228,6 +228,12 @@ PlayerStateHandler
 
 		Sets units into motion.
 
+		This method has a built-in path planner that you can use.
+
+		The path planner can be used to implement formations and terrain preference.
+
+		The actual path and its cost are returned.
+
 		The parameter success's value is set if not ``NULL`` and it
 		indicates the outcome of the call.
 		
@@ -260,11 +266,21 @@ PlayerStateHandler
 
 		   	.. cpp:var:: std::vector<int64_t> terrain_weights
 
-		   		The weights to be assigned to the terrain elements (Plain, Mountain, Forest)
+		   		The weights to be assigned to the terrain elements
+
+		   		This vector is indexed by :cpp:enum:`state::TERRAIN_TYPE`, so it must be of size ``3``
+
+		   		* ``0`` index is :cpp:enumerator:`state::PLAIN`
+		   		* ``1`` index is :cpp:enumerator:`state::FOREST`
+		   		* ``2`` index is :cpp:enumerator:`state::MOUNTAIN`
+
+		   		Each weight is a number greater than zero
+
+		   		The higher the weight, the less preference you're giving to a path along that terrain
 
 		   	.. cpp:var:: std::vector<physics::Vector2D>& path
 
-		   		The path the leader will move along
+		   		The path the leader will move along is stored in this vector after the function call
 
 		   	.. cpp:var:: int* success
 
@@ -279,6 +295,8 @@ PlayerStateHandler
 		Sets units into motion.
 		
 		The path is given by you, no path planning is done in this method.
+
+		However, the facility to move in formation is still present.
 		
 		The parameter success's value is set if not ``NULL`` and it
 		indicates the outcome of the call.
@@ -430,11 +448,21 @@ PlayerStateHandler
 
 			.. cpp:var:: std::vector<int64_t> terrain_weights
 
-				The weights to be assigned to the terrain elements (Plain, Mountain, Forest)
+				The weights to be assigned to the terrain elements
+
+				This vector is indexed by :cpp:enum:`state::TERRAIN_TYPE`, so it must be of size ``3``
+
+				* ``0`` index is :cpp:enumerator:`state::PLAIN`
+				* ``1`` index is :cpp:enumerator:`state::FOREST`
+				* ``2`` index is :cpp:enumerator:`state::MOUNTAIN`
+
+				Each weight is a number greater than zero
+
+				The higher the weight, the less preference you're giving to a path along that terrain
 
 			.. cpp:var:: std::vector<physics::Vector2D>& path
 
-				The shortest path
+				The shortest path is stored in this vector after the function call
 				
 				This is a list of 2D vectors from start (excluding it) to destination (including it)
 			
