@@ -1,6 +1,34 @@
 PlayerStateHandler
 ==================
 
+TerrainElementView
+------------------
+
+.. cpp:class:: struct state::TerrainElementView
+
+	The terrain is a grid of TerrainElements
+
+	This is an interface for TerrainElements
+
+	.. cpp:member:: physics::Vector2D position
+
+		Position of the TerrainElement in cartesian coordinates
+
+	.. cpp:member:: int64_t size
+
+		The size of this TerrainElement
+
+	.. cpp:member:: TERRAIN_TYPE terrain_type
+
+		The type of terrain in this TerrainElement
+
+	.. cpp:member:: LOS_TYPE los_type
+
+		The Line of Sight you have to this TerrainElement
+
+PlayerStateHandler
+------------------
+
 .. cpp:class:: state::PlayerStateHandler
 
 	The interface for accessing and manipulating the internal state of the game
