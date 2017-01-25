@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Code Character'
-copyright = u'2017, Arun Ramachandran'
-author = u'Arun Ramachandran'
+copyright = u'2017, Delta Force'
+author = u'Delta Force'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -129,7 +129,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'CodeCharacter.tex', u'Code Character Documentation',
-     u'Arun Ramachandran', 'manual'),
+     u'Delta Force', 'manual'),
 ]
 
 
