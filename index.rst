@@ -11,6 +11,7 @@ Welcome to Code Character's documentation!
    :caption: Contents:
 
    vector2d
+   utilities
    player_state_handler
    views
 
