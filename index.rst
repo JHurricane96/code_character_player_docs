@@ -10,6 +10,7 @@ Welcome to Code Character's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   vector2d
    player_state_handler
    views
 
