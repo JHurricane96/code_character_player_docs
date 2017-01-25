@@ -68,11 +68,11 @@ Line Of Sight Types
 FormationMaker
 --------------
 
-.. cpp:class:: FormationMaker
+.. cpp:class:: state::FormationMaker
 
 	Inherit from this class to be able to define formations
 
-	A formation is basically a list of vectors (``physics::Vector2D`` instances)
+	A formation is basically a list of vectors (:cpp:class:`physics::Vector2D` instances)
 
 	The first element must be ``(0, 0)``, which is the leader's position
 
