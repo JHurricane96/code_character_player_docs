@@ -18,23 +18,23 @@ List of Actor IDs
 Terrain Type
 ------------
 
-.. cpp:enum:: TERRAIN_TYPE
+.. cpp:enum:: state::TERRAIN_TYPE
 
 	Enumerator for the terrain types
 
-	.. cpp:var:: PLAIN
+	.. cpp:enumerator:: PLAIN
 
 		Plain terrain type
 
-	.. cpp:var:: FOREST
+	.. cpp:enumerator:: FOREST
 
 		Forest terrain type
 
-	.. cpp:var:: MOUNTAIN
+	.. cpp:enumerator:: MOUNTAIN
 
 		Mountain terrain type
 
-	.. cpp:var:: UNDEFINED
+	.. cpp:enumerator:: UNDEFINED
 
 		Undefined terrain type
 
@@ -43,23 +43,23 @@ Terrain Type
 Line Of Sight Types
 -------------------
 
-.. cpp:enum:: LOS_TYPE
+.. cpp:enum:: state::LOS_TYPE
 
 	Enumerator for the types of Lines Of Sight
 
-	.. cpp:var:: UNEXPLORED
+	.. cpp:enumerator:: UNEXPLORED
 
 		Terrain that is unexplored by you
 
 		You have not visited this region yet
 
-	.. cpp:var:: EXPLORED
+	.. cpp:enumerator:: EXPLORED
 
 		Terrain that has been explored by you
 
 		You have visited this region at least once, but don't have a direct LOS on it
 
-	.. cpp:var:: DIRECT_LOS
+	.. cpp:enumerator:: DIRECT_LOS
 
 		Terrain over which you have direct Line Of Sight
 
