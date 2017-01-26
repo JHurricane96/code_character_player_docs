@@ -138,3 +138,66 @@ MagicianView
 	.. cpp:function:: GetFireBallSpeed()
 
 		Gets the speed of FireBalls that are fired by this Magician
+
+EnemyMagicianView
+-----------------
+
+.. cpp:type:: state::EnemyUnitView state::EnemyMagicianView
+
+	Provides you with a restricted interface to work with your enemy's Magicians
+
+ScoutView
+---------
+
+.. cpp:type:: state::UnitView state::ScoutView
+
+	Provides you with an interface to work with your own Scouts
+
+EnemyScoutView
+--------------
+
+.. cpp:type:: state::EnemyUnitView state::EnemyScoutView
+
+	Provides you with a restricted interface to work with your enemy's Scouts
+
+KingView
+--------
+
+.. cpp:type:: state::UnitView state::KingView
+
+	Provides you with an interface to work with your own Kings
+
+EnemyKingView
+-------------
+
+.. cpp:type:: state::EnemyUnitView state::EnemyKingView
+
+	Provides you with a restricted interface to work with your enemy's Kings
+
+FlagView
+--------
+
+.. cpp:type:: state::UnitView state::FlagView
+
+	Provides you with an interface to work with your own Flags
+
+EnemyFlagView
+-------------
+
+.. cpp:type:: state::EnemyUnitView state::EnemyFlagView
+
+	Provides you with a restricted interface to work with your enemy's Flags
+
+BaseView
+--------
+
+.. cpp:type:: state::UnitView state::BaseView
+
+	Provides you with an interface to work with your own Bases
+
+EnemyBaseView
+-------------
+
+.. cpp:type:: state::EnemyUnitView state::EnemyBaseView
+
+	Provides you with a restricted interface to work with your enemy's Bases

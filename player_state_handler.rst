@@ -4,7 +4,7 @@ PlayerStateHandler
 TerrainElementView
 ------------------
 
-.. cpp:class:: struct state::TerrainElementView
+.. cpp:class:: state::TerrainElementView
 
 	The terrain is a grid of TerrainElements
 
@@ -18,11 +18,11 @@ TerrainElementView
 
 		The size of this TerrainElement
 
-	.. cpp:member:: TERRAIN_TYPE terrain_type
+	.. cpp:member:: state::TERRAIN_TYPE terrain_type
 
 		The type of terrain in this TerrainElement
 
-	.. cpp:member:: LOS_TYPE los_type
+	.. cpp:member:: state::LOS_TYPE los_type
 
 		The Line of Sight you have to this TerrainElement
 
@@ -45,15 +45,15 @@ PlayerStateHandler
 
 		Gets your Magicians
 
-	.. cpp:function:: std::vector<state::EnemyUnitView> GetEnemyMagicians()
+	.. cpp:function:: std::vector<state::EnemyMagicianView> GetEnemyMagicians()
 
 		Gets your enemy's Magicians that are in your Line Of Sight
 
-	.. cpp:function:: std::vector<state::UnitView> GetScouts()
+	.. cpp:function:: std::vector<state::ScoutView> GetScouts()
 
 		Gets your Scouts
 
-	.. cpp:function:: std::vector<state::EnemyUnitView> GetEnemyScouts()
+	.. cpp:function:: std::vector<state::EnemyScoutView> GetEnemyScouts()
 
 		Gets your enemy's Scouts that are in your Line Of Sight
 
@@ -73,11 +73,11 @@ PlayerStateHandler
 
 		Gets the enemy's Towers
 
-	.. cpp:function:: state::UnitView GetKing()
+	.. cpp:function:: state::KingView GetKing()
 
 		Gets your King
 
-	.. cpp:function:: state::EnemyUnitView GetEnemyKing(success)
+	.. cpp:function:: state::EnemyKingView GetEnemyKing(success)
 
 		Gets your enemy's King if it's in your Line Of Sight
 		
@@ -96,19 +96,19 @@ PlayerStateHandler
 
 				If valid pointer (not ``NULL``), holds success of the function call
 
-	.. cpp:function:: state::UnitView GetFlag()
+	.. cpp:function:: state::FlagView GetFlag()
 
 		Gets your Flag
 
-	.. cpp:function:: state::EnemyUnitView GetEnemyFlag()
+	.. cpp:function:: state::EnemyFlagView GetEnemyFlag()
 
 		Gets your enemy's Flag
 
-	.. cpp:function:: state::UnitView GetBase()
+	.. cpp:function:: state::BaseView GetBase()
 
 		Gets your Base
 
-	.. cpp:function:: state::EnemyUnitView GetEnemyBase()
+	.. cpp:function:: state::EnemyBaseView GetEnemyBase()
 
 		Gets your enemy's Base
 
