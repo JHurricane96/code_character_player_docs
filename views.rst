@@ -55,7 +55,7 @@ UnitView
 
 		Gets the position vector of this unit
 
-	.. cpp:function:: GetPathPlannerHelper()
+	.. cpp:function:: state::PathPlannerHelperView GetPathPlannerHelper()
 
 		Gets this unit's PathPlannerHelper
 
