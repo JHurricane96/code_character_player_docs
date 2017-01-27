@@ -18,7 +18,24 @@ Good luck!
 Plot
 ====
 
-COMING SOON! (Maybe)
+On a beautiful autumn day, you take a stroll through your garden, watching the 
+brown leaves dance in the wind.
+
+Suddenly, you hear a voice in your head. It whispers to you, caresses, embraces 
+you. Then it tells you that in a hundred other kingdoms, a hundred other
+kings are enjoying the exact same day, each content with their own little
+piece of land.
+
+'Your people are poor, there is no trade between kingdoms, and winter is coming.
+Yet you choose to walk in your garden, content with your accomplishments, such as they are.'
+
+On hearing these words, you are filled with shame, for you know them to be true.
+
+'What do I do?' you ask desperately. 'How do I bring light to my kingdom cast in darkness?'
+
+'Unite these kingdoms. Conquer them with fire and sword. Bring them all under your rule.
+
+'Only where there is unity can there be peace.'
 
 Game Elements Overview
 ======================
@@ -49,7 +66,7 @@ LOS Radius            \-      0       3       11        15      2          15
 
 There are 4 types of moveable actors that the user can control:
 
-- King
+- King (That's you, my liege :) )
 
   - Each side has one king
   - The King is the only unit that can capture and move the enemy flag
@@ -57,15 +74,16 @@ There are 4 types of moveable actors that the user can control:
 - Magician
 
   - The magician can conjure up fireballs that home in on the intended target
+  - They make it easy to bring light to your kingdom cast in darkness
 
 - Scout
 
-  - The scout is invisible to the enemies except when it wanders near a base or
-    a tower
+  - The nefarious scout uses its guile to be invisible to enemies except when 
+    it wanders near a base or a tower
 
 - Swordsman
 
-  - A sword wielding strongman
+  - A sword-wielding strongman
 
 
 Death and Respawning
@@ -82,9 +100,10 @@ The other components include:
 - Base
 
   - Each team has a base where the flag is positioned initially
-  - Park too many units near the base and you get docked points
+  - Park too many units near the base and you get docked points, 'cause winter's coming and your 
+    villagers really need that sugar from the enemy kingdom :(
   - Dead units ready to be respawned can be respawned either at the base or at
-    one of the towers that the player owns
+    one of the towers that you own
 
 - Fire Ball
 
@@ -96,30 +115,36 @@ The other components include:
 
 - Tower
 
-  - Can fire fireballs at the enemy troops
-  - Units can be respawned at the towers too
-  - Tower Ownership
+  - Imbued with magic by your magicians, your towers are a symbol of power and a rally point for your troops
+  - They can fire fireballs at enemy troops
+  - Your units can be respawned at the towers too
+  - Tower Ownership:
 
-		- Towers can change ownership when their HP has been brought down to zero
-		  after which it is contended for.
-		- During the contention period, both players try to occupy the region around the tower
-		- The numerical advantage in troops at the end of every tick is added to
-		  the contention score.
-		- When the contention score reaches 100, the player who hit the maximum
-		  contention score assumes tower ownership
+    - Towers can change ownership when their HP has been brought down to zero
+      after which it is contended for.
+    - During the contention period, both players try to occupy the region around the tower
+    - The numerical advantage in troops at the end of every tick is added to
+      the contention score.
+    - When the contention score reaches 100, the player who hit the maximum
+      contention score assumes tower ownership
 
 
 Map
 ---
 
-- The terrain is a 60x60 grid where each element is either a
+- The terrain is a 60x60 grid where each element is either a:
 
   - Plain
-	  Normal stuff
+
+    - Normal stuff
+
   - Forest
-	  Attacking range and visibility reduce when units are in the forest
+
+    - Attacking range and visibility reduce when units are in the forest
+
   - Mountain
-	  Attacking range and visibility increase when units are in the forest
+
+    - Attacking range and visibility increase when units are in the forest
 
 Game Mechanics
 ==============
