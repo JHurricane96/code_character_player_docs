@@ -147,6 +147,37 @@ Map
 
     - Attacking range and visibility increase when units are in the forest
 
+Line of Sight
+^^^^^^^^^^^^^
+
+Each actor has a line of sight radius defined in terms of grid elements.
+For a player, each grid element is in one of 3 states:
+
+- Unexplored
+
+  - Self explanatory. The player's troops haven't yet set foot on this piece of
+    terrain
+  - The unexplored regions are shrouded in darkness and the players will not be
+    able to see what lies underneath
+
+- Explored
+
+  - The player's troops were at this point some time in the past but are not
+    there presently
+  - Explored regions are partially unmasked.
+
+    - The terrain type and towers (if present on the grid element) will continue
+      to be visible to the players for the rest of the game
+    - The enemy actors (again if present on this piece of terrain), however,
+      will not the visible
+
+- Direct LOS
+
+  - A grid element is in direct LOS if any of the player's troops are on it at
+    the moment.
+  - Everything, including enemy actors are fully visible
+  - The player's actors can only attack those troops that are in direct LOS
+
 Game Mechanics
 ==============
 
