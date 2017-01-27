@@ -92,8 +92,9 @@ Death and Respawning
 When Actors die, they're added to the respawn queue.
 
 The list of actors ready to be respawned can be obtained with a call to
-:cpp:func:`state::PlayerStateHandler::GetRespawnables` and the actors themselves can be respawned by
-calling the :cpp:func:`state::PlayerStateHandler::RespawnUnit` function
+:cpp:func:`state::PlayerStateHandler::GetRespawnables` and the actors themselves
+can be respawned by calling the
+:cpp:func:`state::PlayerStateHandler::RespawnUnit` function
 
 The other components include:
 
@@ -170,24 +171,18 @@ There are 2 update cycles that keep the game ticking
   - Each player gets their own thread of execution and an individual copy of the
     game state that they work with.
   - Each thread executes the code defined in the playerAI's ``Update`` method.
-  - All actions are performed real time and at the end of each player update
-    cycle, the player's actors' position, line of sight and HP get updated as
-    laid out by the player's code
-  - So keep in mind that if you're calling ``MoveUnits()`` or some other action,
-    any data you've stored previously will be outdated at the end of the update
-    cycle.
+  - A player's update cycle may take more than one clock tick. However, at the end
+    of the first clock tick, the player's copy of the game state will become stale,
+    so a tradeoff between strategy and speed must be made.
 
 - The main update cycle
 
-  - The main update cycle synchronises the player's game states with the main
-    state.
-  - The players' states are merged with the main game state and each player is
-    provided a copy of the new up to date state
-  - The player is informed of the enemy's latest whereabouts at the end of the
-    main update cycle
+  - The main update cycle has its own thread which it uses to update the state
+    every clock tick.
+  - Actor positions, HP and Lines Of Sight are updated.
+  - If a player was done with his/her update cycle, the main thread also updates
+    the player's copy of the game state.
 
-**NOTE**: The player can take longer than one main update cycle to execute his
-code if needed
 
 API available
 -------------
