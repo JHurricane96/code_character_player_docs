@@ -15,6 +15,45 @@ List of Actor IDs
 
 	Type for a list of Actor IDs
 
+Actor Types
+-----------
+
+.. cpp:enum-class:: state::ActorType
+
+	Enumerator for Actor types
+
+	.. cpp:enumerator:: MAGICIAN
+
+		Actor type for Magicians
+
+	.. cpp:enumerator:: FIREBALL
+
+		Actor type for Fireballs
+
+	.. cpp:enumerator:: BASE
+
+		Actor type for Bases
+
+	.. cpp:enumerator:: FLAG
+
+		Actor type for Flags
+
+	.. cpp:enumerator:: KING
+
+		Actor type for Kings
+
+	.. cpp:enumerator:: SCOUT
+
+		Actor type for Scouts
+
+	.. cpp:enumerator:: SWORDSMAN
+
+		Actor type for Swordsmen
+
+	.. cpp:enumerator:: TOWER
+
+		Actor type for Towers
+
 Terrain Type
 ------------
 
