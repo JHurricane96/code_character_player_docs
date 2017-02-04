@@ -164,6 +164,12 @@ PlayerStateHandler
 
 				If valid pointer (not ``NULL``), holds success of the function call
 
+	.. cpp:function:: int64_t GetTerrainRows()
+
+		Gets the number of rows of TerrainElements in the terrain
+
+		The terrain is square, so this is also the number of columns
+
 	.. cpp:function:: state::UnitView GetUnitFromId(actor_id, success)
 
 		Gets an Actor (UnitView) belonging to you from its ID
