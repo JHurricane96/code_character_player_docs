@@ -207,6 +207,7 @@ PlayerStateHandler
 
 		* ``0``  if actor id is invalid
 		* ``-1`` if actor does not belong to the enemy
+		* ``-2`` if actor is not in your Line Of Sight
 		* ``1``  if successful
 
 		**Parameters:**
