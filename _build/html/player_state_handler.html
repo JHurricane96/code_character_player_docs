@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PlayerStateHandler &mdash; Code Character  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Code Character  documentation" href="index.html"/>
+        <link rel="next" title="UnitViews" href="views.html"/>
+        <link rel="prev" title="Utilities" href="utilities.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Code Character
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector2d.html">Vector2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PlayerStateHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terrainelementview">TerrainElementView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">PlayerStateHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">UnitViews</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Code Character</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>PlayerStateHandler</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/player_state_handler.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="playerstatehandler">
+<h1>PlayerStateHandler<a class="headerlink" href="#playerstatehandler" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="terrainelementview">
+<h2>TerrainElementView<a class="headerlink" href="#terrainelementview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state18TerrainElementViewE">
+<span id="state::TerrainElementView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">TerrainElementView</code><a class="headerlink" href="#_CPPv2N5state18TerrainElementViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The terrain is a grid of TerrainElements</p>
+<p>This is an interface for TerrainElements</p>
+<dl class="member">
+<dt id="_CPPv2N5state18TerrainElementView8positionE">
+<span id="state::TerrainElementView::position__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv2N5state18TerrainElementView8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Position of the TerrainElement in cartesian coordinates</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N5state18TerrainElementView4sizeE">
+<span id="state::TerrainElementView::size__int64_t"></span>int64_t <code class="descclassname"></code><code class="descname">size</code><a class="headerlink" href="#_CPPv2N5state18TerrainElementView4sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The size of this TerrainElement</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N5state18TerrainElementView12terrain_typeE">
+<span id="state::TerrainElementView::terrain_type__state::TERRAIN_TYPE"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPEE" title="state::TERRAIN_TYPE">TERRAIN_TYPE</a> <code class="descclassname"></code><code class="descname">terrain_type</code><a class="headerlink" href="#_CPPv2N5state18TerrainElementView12terrain_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The type of terrain in this TerrainElement</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N5state18TerrainElementView8los_typeE">
+<span id="state::TerrainElementView::los_type__state::LOS_TYPE"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8LOS_TYPEE" title="state::LOS_TYPE">LOS_TYPE</a> <code class="descclassname"></code><code class="descname">los_type</code><a class="headerlink" href="#_CPPv2N5state18TerrainElementView8los_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Line of Sight you have to this TerrainElement</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2>PlayerStateHandler<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state18PlayerStateHandlerE">
+<span id="state::PlayerStateHandler"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">PlayerStateHandler</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandlerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The interface for accessing and manipulating the internal state of the game</p>
+<p><strong>NOTE</strong>:</p>
+<blockquote>
+<div>The getters for all your own units also return dead units</div></blockquote>
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler16GetPlayerUnitIdsEv">
+<span id="state::PlayerStateHandler::GetPlayerUnitIds"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">GetPlayerUnitIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler16GetPlayerUnitIdsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets Actor IDs of your units</p>
+<p>Returns <strong>all</strong> units, including flag, base, dead units, etc</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler17GetPlayerEnemyIdsEv">
+<span id="state::PlayerStateHandler::GetPlayerEnemyIds"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">GetPlayerEnemyIds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler17GetPlayerEnemyIdsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets Actor IDs for enemy units visible to you</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetMagiciansEv">
+<span id="state::PlayerStateHandler::GetMagicians"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state12MagicianViewE" title="state::MagicianView">MagicianView</a>&gt; <code class="descclassname"></code><code class="descname">GetMagicians</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetMagiciansEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Magicians</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler17GetEnemyMagiciansEv">
+<span id="state::PlayerStateHandler::GetEnemyMagicians"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state17EnemyMagicianViewE" title="state::EnemyMagicianView">EnemyMagicianView</a>&gt; <code class="descclassname"></code><code class="descname">GetEnemyMagicians</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler17GetEnemyMagiciansEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s Magicians that are in your Line Of Sight</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler9GetScoutsEv">
+<span id="state::PlayerStateHandler::GetScouts"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state9ScoutViewE" title="state::ScoutView">ScoutView</a>&gt; <code class="descclassname"></code><code class="descname">GetScouts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9GetScoutsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Scouts</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler14GetEnemyScoutsEv">
+<span id="state::PlayerStateHandler::GetEnemyScouts"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state14EnemyScoutViewE" title="state::EnemyScoutView">EnemyScoutView</a>&gt; <code class="descclassname"></code><code class="descname">GetEnemyScouts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler14GetEnemyScoutsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s Scouts that are in your Line Of Sight</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetSwordsmenEv">
+<span id="state::PlayerStateHandler::GetSwordsmen"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state13SwordsmanViewE" title="state::SwordsmanView">SwordsmanView</a>&gt; <code class="descclassname"></code><code class="descname">GetSwordsmen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetSwordsmenEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Swordsmen</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler17GetEnemySwordsmenEv">
+<span id="state::PlayerStateHandler::GetEnemySwordsmen"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state18EnemySwordsmanViewE" title="state::EnemySwordsmanView">EnemySwordsmanView</a>&gt; <code class="descclassname"></code><code class="descname">GetEnemySwordsmen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler17GetEnemySwordsmenEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s Swordsmen that are in your Line Of Sight</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler9GetTowersEv">
+<span id="state::PlayerStateHandler::GetTowers"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state9TowerViewE" title="state::TowerView">TowerView</a>&gt; <code class="descclassname"></code><code class="descname">GetTowers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9GetTowersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Towers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler14GetEnemyTowersEv">
+<span id="state::PlayerStateHandler::GetEnemyTowers"></span>std::vector&lt;state::<a class="reference internal" href="views.html#_CPPv2N5state14EnemyTowerViewE" title="state::EnemyTowerView">EnemyTowerView</a>&gt; <code class="descclassname"></code><code class="descname">GetEnemyTowers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler14GetEnemyTowersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the enemy&#8217;s Towers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler7GetKingEv">
+<span id="state::PlayerStateHandler::GetKing"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state8KingViewE" title="state::KingView">KingView</a> <code class="descclassname"></code><code class="descname">GetKing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler7GetKingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your King</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetEnemyKingE7success">
+<span id="state::PlayerStateHandler::GetEnemyKing__success"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state13EnemyKingViewE" title="state::EnemyKingView">EnemyKingView</a> <code class="descclassname"></code><code class="descname">GetEnemyKing</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler12GetEnemyKing7successE" title="state::PlayerStateHandler::GetEnemyKing::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetEnemyKingE7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s King if it&#8217;s in your Line Of Sight</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if the enemy King is not in your Line Of Sight/is dead</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if the King is retrieved</li>
+</ul>
+<p>Returns <code class="docutils literal"><span class="pre">nullptr</span></code> if the enemy King isn&#8217;t in your LOS</p>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetEnemyKing7successE">
+<span id="state::PlayerStateHandler::GetEnemyKing::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetEnemyKing7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of the function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler7GetFlagEv">
+<span id="state::PlayerStateHandler::GetFlag"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state8FlagViewE" title="state::FlagView">FlagView</a> <code class="descclassname"></code><code class="descname">GetFlag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler7GetFlagEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Flag</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetEnemyFlagEv">
+<span id="state::PlayerStateHandler::GetEnemyFlag"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state13EnemyFlagViewE" title="state::EnemyFlagView">EnemyFlagView</a> <code class="descclassname"></code><code class="descname">GetEnemyFlag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetEnemyFlagEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s Flag</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler7GetBaseEv">
+<span id="state::PlayerStateHandler::GetBase"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state8BaseViewE" title="state::BaseView">BaseView</a> <code class="descclassname"></code><code class="descname">GetBase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler7GetBaseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your Base</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler12GetEnemyBaseEv">
+<span id="state::PlayerStateHandler::GetEnemyBase"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state13EnemyBaseViewE" title="state::EnemyBaseView">EnemyBaseView</a> <code class="descclassname"></code><code class="descname">GetEnemyBase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12GetEnemyBaseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your enemy&#8217;s Base</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElementE8position7success">
+<span id="state::PlayerStateHandler::CoordinateToTerrainElement__position.success"></span>state::<a class="reference internal" href="#_CPPv2N5state18TerrainElementViewE" title="state::TerrainElementView">TerrainElementView</a> <code class="descclassname"></code><code class="descname">CoordinateToTerrainElement</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement8positionE" title="state::PlayerStateHandler::CoordinateToTerrainElement::position">position</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement7successE" title="state::PlayerStateHandler::CoordinateToTerrainElement::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElementE8position7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets TerrainElementView corresponding to position vector</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if coordinate given is out of bounds</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement8positionE">
+<span id="state::PlayerStateHandler::CoordinateToTerrainElement::position__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">position</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement8positionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The position vector in x, y cartesian coordinates</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement7successE">
+<span id="state::PlayerStateHandler::CoordinateToTerrainElement::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler26CoordinateToTerrainElement7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of the function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElementE6offset7success">
+<span id="state::PlayerStateHandler::OffsetToTerrainElement__offset.success"></span>state::<a class="reference internal" href="#_CPPv2N5state18TerrainElementViewE" title="state::TerrainElementView">TerrainElementView</a> <code class="descclassname"></code><code class="descname">OffsetToTerrainElement</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement6offsetE" title="state::PlayerStateHandler::OffsetToTerrainElement::offset">offset</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement7successE" title="state::PlayerStateHandler::OffsetToTerrainElement::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElementE6offset7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets TerrainElement corresponding to grid offset</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if offset given is out of bounds</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement6offsetE">
+<span id="state::PlayerStateHandler::OffsetToTerrainElement::offset__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">offset</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The position vector in offset form.</p>
+<p><code class="docutils literal"><span class="pre">offset.x</span></code> = row number</p>
+<p><code class="docutils literal"><span class="pre">offset.y</span></code> = column number</p>
+<p>Rows and columns are zero-indexed.</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement7successE">
+<span id="state::PlayerStateHandler::OffsetToTerrainElement::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler22OffsetToTerrainElement7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of the function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler14GetTerrainRowsEv">
+<span id="state::PlayerStateHandler::GetTerrainRows"></span>int64_t <code class="descclassname"></code><code class="descname">GetTerrainRows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler14GetTerrainRowsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the number of rows of TerrainElements in the terrain</p>
+<p>The terrain is square, so this is also the number of columns</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler13GetUnitFromIdE8actor_id7success">
+<span id="state::PlayerStateHandler::GetUnitFromId__actor_id.success"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a> <code class="descclassname"></code><code class="descname">GetUnitFromId</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler13GetUnitFromId8actor_idE" title="state::PlayerStateHandler::GetUnitFromId::actor_id">actor_id</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler13GetUnitFromId7successE" title="state::PlayerStateHandler::GetUnitFromId::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler13GetUnitFromIdE8actor_id7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets an Actor (UnitView) belonging to you from its ID</p>
+<p>Returns an empty UnitView on an unsuccessful call</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if Actor ID is invalid</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if Actor does not belong to you</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler13GetUnitFromId8actor_idE">
+<span id="state::PlayerStateHandler::GetUnitFromId::actor_id__state::act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">actor_id</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler13GetUnitFromId8actor_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Actor&#8217;s ID</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler13GetUnitFromId7successE">
+<span id="state::PlayerStateHandler::GetUnitFromId::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler13GetUnitFromId7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromIdE8actor_id7success">
+<span id="state::PlayerStateHandler::GetEnemyUnitFromId__actor_id.success"></span>state::<a class="reference internal" href="views.html#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> <code class="descclassname"></code><code class="descname">GetEnemyUnitFromId</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId8actor_idE" title="state::PlayerStateHandler::GetEnemyUnitFromId::actor_id">actor_id</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId7successE" title="state::PlayerStateHandler::GetEnemyUnitFromId::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromIdE8actor_id7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets an Actor (EnemyUnitView) belonging to your enemy from its ID</p>
+<p>Returns an empty EnemyUnitView on an unsuccessful call</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if actor id is invalid</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if actor does not belong to the enemy</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if actor is not in your Line Of Sight/is dead</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId8actor_idE">
+<span id="state::PlayerStateHandler::GetEnemyUnitFromId::actor_id__state::act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">actor_id</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId8actor_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The enemy&#8217;s Actor&#8217;s ID</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId7successE">
+<span id="state::PlayerStateHandler::GetEnemyUnitFromId::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler18GetEnemyUnitFromId7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler8GetScoreEv">
+<span id="state::PlayerStateHandler::GetScore"></span>int64_t <code class="descclassname"></code><code class="descname">GetScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8GetScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns your score</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler13GetEnemyScoreEv">
+<span id="state::PlayerStateHandler::GetEnemyScore"></span>int64_t <code class="descclassname"></code><code class="descname">GetEnemyScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler13GetEnemyScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns your enemy&#8217;s score</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler15GetRespawnablesEv">
+<span id="state::PlayerStateHandler::GetRespawnables"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">GetRespawnables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler15GetRespawnablesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets Actor IDs of your dead units that are ready to respawn</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnitsE8unit_ids11destination15formation_maker15terrain_weights4path7success">
+<span id="state::PlayerStateHandler::MoveUnits__unit_ids.destination.formation_maker.terrain_weights.path.success"></span>void <code class="descclassname"></code><code class="descname">MoveUnits</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits8unit_idsE" title="state::PlayerStateHandler::MoveUnits::unit_ids">unit_ids</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits11destinationE" title="state::PlayerStateHandler::MoveUnits::destination">destination</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits15formation_makerE" title="state::PlayerStateHandler::MoveUnits::formation_maker">formation_maker</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits15terrain_weightsE" title="state::PlayerStateHandler::MoveUnits::terrain_weights">terrain_weights</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits4pathE" title="state::PlayerStateHandler::MoveUnits::path">path</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits7successE" title="state::PlayerStateHandler::MoveUnits::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnitsE8unit_ids11destination15formation_maker15terrain_weights4path7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets units into motion.</p>
+<p>This method has a built-in path planner that you can use.</p>
+<p>The path planner can be used to implement formations and terrain preference.</p>
+<p>The actual path and its cost are returned.</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it
+indicates the outcome of the call.</p>
+<p>This method is meant to be called once to move units, and is hence best for long journeys.</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code>  if unit_ids is empty</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if any unit&#8217;s Actor ID is invalid</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if any unit doesn&#8217;t belong to you</li>
+<li><code class="docutils literal"><span class="pre">-3</span></code> if any unit is dead</li>
+<li><code class="docutils literal"><span class="pre">-4</span></code> if any of the units isn&#8217;t capable of moving (Flag, Base)</li>
+<li><code class="docutils literal"><span class="pre">-5</span></code> if destination is not on the map</li>
+<li><code class="docutils literal"><span class="pre">-6</span></code> if formation is not valid</li>
+<li><code class="docutils literal"><span class="pre">-7</span></code> if terrain_weights isn&#8217;t of size 3</li>
+<li><code class="docutils literal"><span class="pre">-8</span></code> if terrain_weights has non-positive weights</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits8unit_idsE">
+<span id="state::PlayerStateHandler::MoveUnits::unit_ids__state::list_act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">unit_ids</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits8unit_idsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor IDs of the units to be moved</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits11destinationE">
+<span id="state::PlayerStateHandler::MoveUnits::destination__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">destination</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits11destinationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The destination</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits15formation_makerE">
+<span id="state::PlayerStateHandler::MoveUnits::formation_maker__state::FormationMakerP"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state14FormationMakerE" title="state::FormationMaker">FormationMaker</a> *<code class="descclassname"></code><code class="descname">formation_maker</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits15formation_makerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The formation maker</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits15terrain_weightsE">
+<span id="state::PlayerStateHandler::MoveUnits::terrain_weights__std::vector:int64_t:"></span>std::vector&lt;int64_t&gt; <code class="descclassname"></code><code class="descname">terrain_weights</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits15terrain_weightsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The weights to be assigned to the terrain elements</p>
+<p>This vector is indexed by <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPEE" title="state::TERRAIN_TYPE"><code class="xref cpp cpp-enum docutils literal"><span class="pre">state::TERRAIN_TYPE</span></code></a>, so it must be of size <code class="docutils literal"><span class="pre">3</span></code></p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE5PLAINE" title="state::PLAIN"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::PLAIN</span></code></a></li>
+<li><code class="docutils literal"><span class="pre">1</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE6FORESTE" title="state::FOREST"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::FOREST</span></code></a></li>
+<li><code class="docutils literal"><span class="pre">2</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE8MOUNTAINE" title="state::MOUNTAIN"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::MOUNTAIN</span></code></a></li>
+</ul>
+<p>Each weight is a number greater than zero</p>
+<p>The higher the weight, the less preference you&#8217;re giving to a path along that terrain</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits4pathE">
+<span id="state::PlayerStateHandler::MoveUnits::path__std::vector:physics::Vector2D:R"></span>std::vector&lt;physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a>&gt; &amp;<code class="descclassname"></code><code class="descname">path</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits4pathE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The path the leader will move along is stored in this vector after the function call</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler9MoveUnits7successE">
+<span id="state::PlayerStateHandler::MoveUnits::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler9MoveUnits7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of the function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.MoveUnits">
+void <code class="descname">MoveUnits</code><span class="sig-paren">(</span>unit_ids, destinations, formation_maker, success<span class="sig-paren">)</span><a class="headerlink" href="#c.MoveUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets units into motion.</p>
+<p>The path is given by you, no path planning is done in this method.</p>
+<p>However, the facility to move in formation is still present.</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it
+indicates the outcome of the call.</p>
+<p>This method can be called repeatedly on moving units, and is best used
+when terrain avoidance/preference is not required.</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if unit_ids is empty</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if any unit&#8217;s Actor ID is invalid</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if any unit doesn&#8217;t belong to you</li>
+<li><code class="docutils literal"><span class="pre">-3</span></code> if any unit is dead</li>
+<li><code class="docutils literal"><span class="pre">-4</span></code> if any of the units isn&#8217;t capable of moving (Flag, Base)</li>
+<li><code class="docutils literal"><span class="pre">-5</span></code> if destinations is empty</li>
+<li><code class="docutils literal"><span class="pre">-6</span></code> if any member of destinations is not on the map</li>
+<li><code class="docutils literal"><span class="pre">-7</span></code> if formation is not valid</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8unit_idsE">
+<span id="state::PlayerStateHandler::unit_ids__state::list_act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">unit_ids</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8unit_idsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor IDs of the units to be moved</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler12destinationsE">
+<span id="state::PlayerStateHandler::destinations__std::vector:physics::Vector2D:"></span>std::vector&lt;physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a>&gt; <code class="descclassname"></code><code class="descname">destinations</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler12destinationsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The path along which the units should move</p>
+<p>It&#8217;s a list of 2D vectors of coordinates</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler15formation_makerE">
+<span id="state::PlayerStateHandler::formation_maker__state::FormationMakerP"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state14FormationMakerE" title="state::FormationMaker">FormationMaker</a> *<code class="descclassname"></code><code class="descname">formation_maker</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler15formation_makerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The formation maker</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler7successE">
+<span id="state::PlayerStateHandler::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of the function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler10AttackUnitE12attacker_ids16attack_target_id7success">
+<span id="state::PlayerStateHandler::AttackUnit__attacker_ids.attack_target_id.success"></span>void <code class="descclassname"></code><code class="descname">AttackUnit</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit12attacker_idsE" title="state::PlayerStateHandler::AttackUnit::attacker_ids">attacker_ids</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit16attack_target_idE" title="state::PlayerStateHandler::AttackUnit::attack_target_id">attack_target_id</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit7successE" title="state::PlayerStateHandler::AttackUnit::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler10AttackUnitE12attacker_ids16attack_target_id7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Command your units to attack a single enemy unit</p>
+<p>Units stop attacking when the enemy goes out of range/Line Of Sight and become idle</p>
+<p>The parameter success&#8217;s value indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if attacker_ids is empty</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if any attacker&#8217;s Actor ID is invalid</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if any attacking unit doesn&#8217;t belong to you</li>
+<li><code class="docutils literal"><span class="pre">-3</span></code> if any attacking unit is dead</li>
+<li><code class="docutils literal"><span class="pre">-4</span></code> if any of the units isn&#8217;t capable of attacking</li>
+<li><code class="docutils literal"><span class="pre">-5</span></code> if the target&#8217;s Actor ID is invalid</li>
+<li><code class="docutils literal"><span class="pre">-6</span></code> if the target is in your team</li>
+<li><code class="docutils literal"><span class="pre">-7</span></code> if the target is dead</li>
+<li><code class="docutils literal"><span class="pre">-8</span></code> if the target isn&#8217;t in your LOS</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler10AttackUnit12attacker_idsE">
+<span id="state::PlayerStateHandler::AttackUnit::attacker_ids__state::list_act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state13list_act_id_tE" title="state::list_act_id_t">list_act_id_t</a> <code class="descclassname"></code><code class="descname">attacker_ids</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit12attacker_idsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>List of Actor IDs of attacking units</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler10AttackUnit16attack_target_idE">
+<span id="state::PlayerStateHandler::AttackUnit::attack_target_id__state::act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">attack_target_id</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit16attack_target_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor ID of the target</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler10AttackUnit7successE">
+<span id="state::PlayerStateHandler::AttackUnit::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler10AttackUnit7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler11FlagCaptureE7success">
+<span id="state::PlayerStateHandler::FlagCapture__success"></span>void <code class="descclassname"></code><code class="descname">FlagCapture</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler11FlagCapture7successE" title="state::PlayerStateHandler::FlagCapture::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11FlagCaptureE7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instructs your King to capture the enemy&#8217;s Flag</p>
+<p>Your King must be at the enemy&#8217;s Flag to capture it,
+it doesn&#8217;t move automatically</p>
+<p>The parameter success&#8217;s value indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if the King is dead</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if the King isn&#8217;t near enough to the Flag</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if the King already has the Flag</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler11FlagCapture7successE">
+<span id="state::PlayerStateHandler::FlagCapture::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11FlagCapture7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler8FlagDropE7success">
+<span id="state::PlayerStateHandler::FlagDrop__success"></span>void <code class="descclassname"></code><code class="descname">FlagDrop</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8FlagDrop7successE" title="state::PlayerStateHandler::FlagDrop::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8FlagDropE7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instructs a player&#8217;s King to drop the enemy&#8217;s Flag</p>
+<p>Your King must be at your Base to drop it, it doesn&#8217;t move automatically</p>
+<p>The parameter success&#8217;s value indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if the King is dead</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if the King isn&#8217;t near enough to his Base</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if the King doesn&#8217;t have a Flag</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8FlagDrop7successE">
+<span id="state::PlayerStateHandler::FlagDrop::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8FlagDrop7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPathE5start11destination15terrain_weights4path7success">
+<span id="state::PlayerStateHandler::PlanPath__start.destination.terrain_weights.path.success"></span>float <code class="descclassname"></code><code class="descname">PlanPath</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8PlanPath5startE" title="state::PlayerStateHandler::PlanPath::start">start</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8PlanPath11destinationE" title="state::PlayerStateHandler::PlanPath::destination">destination</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8PlanPath15terrain_weightsE" title="state::PlayerStateHandler::PlanPath::terrain_weights">terrain_weights</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8PlanPath4pathE" title="state::PlayerStateHandler::PlanPath::path">path</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler8PlanPath7successE" title="state::PlayerStateHandler::PlanPath::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPathE5start11destination15terrain_weights4path7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the total weight of the best (shortest)
+path between the given points and returns it</p>
+<p>The parameter success&#8217;s value indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if start is not on the map</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if destination is not on the map</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if terrain_weights isn&#8217;t of size 3</li>
+<li><code class="docutils literal"><span class="pre">-3</span></code> if terrain_weights has non-positive weights</li>
+<li><code class="docutils literal"><span class="pre">1</span></code>  if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPath5startE">
+<span id="state::PlayerStateHandler::PlanPath::start__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">start</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPath5startE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The starting point&#8217;s cartesian coordinates</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPath11destinationE">
+<span id="state::PlayerStateHandler::PlanPath::destination__physics::Vector2D"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">destination</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPath11destinationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The destination&#8217;s cartesian coordinates</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPath15terrain_weightsE">
+<span id="state::PlayerStateHandler::PlanPath::terrain_weights__std::vector:int64_t:"></span>std::vector&lt;int64_t&gt; <code class="descclassname"></code><code class="descname">terrain_weights</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPath15terrain_weightsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The weights to be assigned to the terrain elements</p>
+<p>This vector is indexed by <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPEE" title="state::TERRAIN_TYPE"><code class="xref cpp cpp-enum docutils literal"><span class="pre">state::TERRAIN_TYPE</span></code></a>, so it must be of size <code class="docutils literal"><span class="pre">3</span></code></p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE5PLAINE" title="state::PLAIN"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::PLAIN</span></code></a></li>
+<li><code class="docutils literal"><span class="pre">1</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE6FORESTE" title="state::FOREST"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::FOREST</span></code></a></li>
+<li><code class="docutils literal"><span class="pre">2</span></code> index is <a class="reference internal" href="utilities.html#_CPPv2N5state12TERRAIN_TYPE8MOUNTAINE" title="state::MOUNTAIN"><code class="xref cpp cpp-enumerator docutils literal"><span class="pre">state::MOUNTAIN</span></code></a></li>
+</ul>
+<p>Each weight is a number greater than zero</p>
+<p>The higher the weight, the less preference you&#8217;re giving to a path along that terrain</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPath4pathE">
+<span id="state::PlayerStateHandler::PlanPath::path__std::vector:physics::Vector2D:R"></span>std::vector&lt;physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a>&gt; &amp;<code class="descclassname"></code><code class="descname">path</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPath4pathE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The shortest path is stored in this vector after the function call</p>
+<p>This is a list of 2D vectors from start (excluding it) to destination (including it)</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler8PlanPath7successE">
+<span id="state::PlayerStateHandler::PlanPath::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler8PlanPath7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state18PlayerStateHandler11RespawnUnitE8actor_id16respawn_location7success">
+<span id="state::PlayerStateHandler::RespawnUnit__actor_id.respawn_location.success"></span>void <code class="descclassname"></code><code class="descname">RespawnUnit</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit8actor_idE" title="state::PlayerStateHandler::RespawnUnit::actor_id">actor_id</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit16respawn_locationE" title="state::PlayerStateHandler::RespawnUnit::respawn_location">respawn_location</a>, <a class="reference internal" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit7successE" title="state::PlayerStateHandler::RespawnUnit::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnitE8actor_id16respawn_location7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Command one of your units to respawn if it&#8217;s dead and
+it&#8217;s ready to respawn</p>
+<p>The parameter success&#8217;s value indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if actor_id is an invalid Actor ID</li>
+<li><code class="docutils literal"><span class="pre">-1</span></code> if the Actor to respawn yours</li>
+<li><code class="docutils literal"><span class="pre">-2</span></code> if the Actor isn&#8217;t dead</li>
+<li><code class="docutils literal"><span class="pre">-3</span></code> if the Actor&#8217;s time_to_respawn isn&#8217;t 0</li>
+<li><code class="docutils literal"><span class="pre">-4</span></code> if the respawn_location is an invalid Actor ID</li>
+<li><code class="docutils literal"><span class="pre">-5</span></code> if the respawn_location isn&#8217;t yours</li>
+<li><code class="docutils literal"><span class="pre">-6</span></code> if the respawn_location isn&#8217;t a Tower/Base</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if successful</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler11RespawnUnit8actor_idE">
+<span id="state::PlayerStateHandler::RespawnUnit::actor_id__state::act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">actor_id</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit8actor_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ID of the Actor to respawn</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler11RespawnUnit16respawn_locationE">
+<span id="state::PlayerStateHandler::RespawnUnit::respawn_location__state::act_id_t"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">respawn_location</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit16respawn_locationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The Actor ID of the Base/Tower to respawn the dead Actor at</p>
+</dd></dl>
+
+<dl class="var">
+<dt id="_CPPv2N5state18PlayerStateHandler11RespawnUnit7successE">
+<span id="state::PlayerStateHandler::RespawnUnit::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state18PlayerStateHandler11RespawnUnit7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="views.html" class="btn btn-neutral float-right" title="UnitViews" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="utilities.html" class="btn btn-neutral" title="Utilities" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delta Force.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

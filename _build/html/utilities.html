@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utilities &mdash; Code Character  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Code Character  documentation" href="index.html"/>
+        <link rel="next" title="PlayerStateHandler" href="player_state_handler.html"/>
+        <link rel="prev" title="Vector2D" href="vector2d.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Code Character
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector2d.html">Vector2D</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#logging">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actor-id">Actor ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-actor-ids">List of Actor IDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actor-types">Actor Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terrain-type">Terrain Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#line-of-sight-types">Line Of Sight Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formationmaker">FormationMaker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="player_state_handler.html">PlayerStateHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">UnitViews</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Code Character</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Utilities</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/utilities.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="utilities">
+<h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt>
+<code class="descname">void ipc::Logger::Instance().SetLogs(log)</code></dt>
+<dd><p>Logs the given string to the renderer console</p>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N19PhonyNameDueToError3logE">
+<span id="PhonyNameDueToError::log__ss"></span>std::string <code class="descclassname"></code><code class="descname">log</code><a class="headerlink" href="#_CPPv2N19PhonyNameDueToError3logE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The string to print on the console</p>
+</dd></dl>
+
+</div></blockquote>
+<p>Example usage:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="n">ipc</span><span class="o">::</span><span class="n">Logger</span><span class="o">::</span><span class="n">Instance</span><span class="p">().</span><span class="n">SetLogs</span><span class="p">(</span><span class="s">&quot;Units are attacking!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="actor-id">
+<h2>Actor ID<a class="headerlink" href="#actor-id" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state8act_id_tE">
+<span id="state::act_id_t"></span><em class="property">typedef </em>int64_t <code class="descclassname">state::</code><code class="descname">act_id_t</code><a class="headerlink" href="#_CPPv2N5state8act_id_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Type for Actor IDs</p>
+<p>An Actor ID uniquely identifies an Actor</p>
+</dd></dl>
+
+</div>
+<div class="section" id="list-of-actor-ids">
+<h2>List of Actor IDs<a class="headerlink" href="#list-of-actor-ids" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state13list_act_id_tE">
+<span id="state::list_act_id_t"></span><em class="property">typedef </em>std::vector&lt;int64_t&gt; <code class="descclassname">state::</code><code class="descname">list_act_id_t</code><a class="headerlink" href="#_CPPv2N5state13list_act_id_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Type for a list of Actor IDs</p>
+</dd></dl>
+
+</div>
+<div class="section" id="actor-types">
+<h2>Actor Types<a class="headerlink" href="#actor-types" title="Permalink to this headline">¶</a></h2>
+<dl class="enum-class">
+<dt id="_CPPv2N5state9ActorTypeE">
+<em class="property">enum class </em><code class="descclassname">state::</code><code class="descname">ActorType</code><a class="headerlink" href="#_CPPv2N5state9ActorTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enumerator for Actor types</p>
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType8MAGICIANE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">MAGICIAN</code><a class="headerlink" href="#_CPPv2N5state9ActorType8MAGICIANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Magicians</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType8FIREBALLE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">FIREBALL</code><a class="headerlink" href="#_CPPv2N5state9ActorType8FIREBALLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Fireballs</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType4BASEE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">BASE</code><a class="headerlink" href="#_CPPv2N5state9ActorType4BASEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Bases</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType4FLAGE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">FLAG</code><a class="headerlink" href="#_CPPv2N5state9ActorType4FLAGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Flags</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType4KINGE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">KING</code><a class="headerlink" href="#_CPPv2N5state9ActorType4KINGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Kings</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType5SCOUTE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">SCOUT</code><a class="headerlink" href="#_CPPv2N5state9ActorType5SCOUTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Scouts</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType9SWORDSMANE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">SWORDSMAN</code><a class="headerlink" href="#_CPPv2N5state9ActorType9SWORDSMANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Swordsmen</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state9ActorType5TOWERE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">TOWER</code><a class="headerlink" href="#_CPPv2N5state9ActorType5TOWERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Actor type for Towers</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="terrain-type">
+<h2>Terrain Type<a class="headerlink" href="#terrain-type" title="Permalink to this headline">¶</a></h2>
+<dl class="enum">
+<dt id="_CPPv2N5state12TERRAIN_TYPEE">
+<em class="property">enum </em><code class="descclassname">state::</code><code class="descname">TERRAIN_TYPE</code><a class="headerlink" href="#_CPPv2N5state12TERRAIN_TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enumerator for the terrain types</p>
+<dl class="enumerator">
+<dt id="_CPPv2N5state12TERRAIN_TYPE5PLAINE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">PLAIN</code><a class="headerlink" href="#_CPPv2N5state12TERRAIN_TYPE5PLAINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Plain terrain type</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state12TERRAIN_TYPE6FORESTE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">FOREST</code><a class="headerlink" href="#_CPPv2N5state12TERRAIN_TYPE6FORESTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Forest terrain type</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state12TERRAIN_TYPE8MOUNTAINE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">MOUNTAIN</code><a class="headerlink" href="#_CPPv2N5state12TERRAIN_TYPE8MOUNTAINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mountain terrain type</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state12TERRAIN_TYPE9UNDEFINEDE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">UNDEFINED</code><a class="headerlink" href="#_CPPv2N5state12TERRAIN_TYPE9UNDEFINEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Undefined terrain type</p>
+<p>Returned when you try to get the terrain type of unexplored regions</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="line-of-sight-types">
+<h2>Line Of Sight Types<a class="headerlink" href="#line-of-sight-types" title="Permalink to this headline">¶</a></h2>
+<dl class="enum">
+<dt id="_CPPv2N5state8LOS_TYPEE">
+<em class="property">enum </em><code class="descclassname">state::</code><code class="descname">LOS_TYPE</code><a class="headerlink" href="#_CPPv2N5state8LOS_TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enumerator for the types of Lines Of Sight</p>
+<dl class="enumerator">
+<dt id="_CPPv2N5state8LOS_TYPE10UNEXPLOREDE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">UNEXPLORED</code><a class="headerlink" href="#_CPPv2N5state8LOS_TYPE10UNEXPLOREDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Terrain that is unexplored by you</p>
+<p>You have not visited this region yet</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state8LOS_TYPE8EXPLOREDE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">EXPLORED</code><a class="headerlink" href="#_CPPv2N5state8LOS_TYPE8EXPLOREDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Terrain that has been explored by you</p>
+<p>You have visited this region at least once, but don&#8217;t have a direct LOS on it</p>
+</dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N5state8LOS_TYPE10DIRECT_LOSE">
+<em class="property">enumerator </em><code class="descclassname"></code><code class="descname">DIRECT_LOS</code><a class="headerlink" href="#_CPPv2N5state8LOS_TYPE10DIRECT_LOSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Terrain over which you have direct Line Of Sight</p>
+<p>Enemy units in these regions are visible to you</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="formationmaker">
+<h2>FormationMaker<a class="headerlink" href="#formationmaker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state14FormationMakerE">
+<span id="state::FormationMaker"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">FormationMaker</code><a class="headerlink" href="#_CPPv2N5state14FormationMakerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherit from this class to be able to define formations</p>
+<p>A formation is basically a list of vectors (<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D"><code class="xref cpp cpp-class docutils literal"><span class="pre">physics::Vector2D</span></code></a> instances)</p>
+<p>The first element must be <code class="docutils literal"><span class="pre">(0,</span> <span class="pre">0)</span></code>, which is the leader&#8217;s position</p>
+<p>The rest of the units follow the leader, and their elements contain positions relative to the leader&#8217;s</p>
+<p>Example usage:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">physics</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">state</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">SimpleFormation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FormationMaker</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector2D</span><span class="o">&gt;</span> <span class="n">ReturnFormation</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">formation_size</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// Creates and returns a list of Vector2D&#39;s, all set to (0, 0)</span>
+                <span class="c1">// This means all units will move together</span>
+                <span class="k">return</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector2D</span><span class="o">&gt;</span><span class="p">(</span>
+                        <span class="n">formation_size</span><span class="p">,</span>
+                        <span class="n">Vector2D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">RectangleFormation</span> <span class="o">:</span> <span class="k">public</span> <span class="n">FormationMaker</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector2D</span><span class="o">&gt;</span> <span class="n">ReturnFormation</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">formation_size</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// This returns a rectangle formation</span>
+                <span class="c1">// It is as close to a square as possible</span>
+                <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">formation_size</span><span class="p">));</span>
+                <span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector2D</span><span class="o">&gt;</span> <span class="n">positions</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">formation_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">positions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Vector2D</span><span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">j</span> <span class="o">*</span> <span class="mi">10</span><span class="p">));</span>
+                        <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">length</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                                <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+                        <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="n">positions</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="_CPPv2N5state14FormationMaker15ReturnFormationE14formation_size">
+<span id="state::FormationMaker::ReturnFormation__formation_size"></span><em class="property">virtual</em> std::vector&lt;physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a>&gt; <code class="descclassname"></code><code class="descname">ReturnFormation</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state14FormationMaker15ReturnFormation14formation_sizeE" title="state::FormationMaker::ReturnFormation::formation_size">formation_size</a><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N5state14FormationMaker15ReturnFormationE14formation_size" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method must be overriden and implemented</p>
+<p>It returns the list of vectors that define a formation</p>
+<p>The formation may vary depending on the <code class="docutils literal"><span class="pre">formation_size</span></code></p>
+<p><strong>Parameters:</strong></p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state14FormationMaker15ReturnFormation14formation_sizeE">
+<span id="state::FormationMaker::ReturnFormation::formation_size__int64_t"></span>int64_t <code class="descclassname"></code><code class="descname">formation_size</code><a class="headerlink" href="#_CPPv2N5state14FormationMaker15ReturnFormation14formation_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The number of units that are in the formation</p>
+<p>This method must return a vector whose size is equal to <code class="docutils literal"><span class="pre">formation_size</span></code></p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="player_state_handler.html" class="btn btn-neutral float-right" title="PlayerStateHandler" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vector2d.html" class="btn btn-neutral" title="Vector2D" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delta Force.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

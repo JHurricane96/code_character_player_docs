@@ -1,0 +1,631 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UnitViews &mdash; Code Character  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Code Character  documentation" href="index.html"/>
+        <link rel="prev" title="PlayerStateHandler" href="player_state_handler.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Code Character
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector2d.html">Vector2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="player_state_handler.html">PlayerStateHandler</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UnitViews</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pathplannerhelperview">PathPlannerHelperView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unitview">UnitView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemyunitview">EnemyUnitView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#swordsmanview">SwordsmanView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemyswordsmanview">EnemySwordsmanView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#towerview">TowerView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemytowerview">EnemyTowerView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magicianview">MagicianView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemymagicianview">EnemyMagicianView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scoutview">ScoutView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemyscoutview">EnemyScoutView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kingview">KingView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemykingview">EnemyKingView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flagview">FlagView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemyflagview">EnemyFlagView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#baseview">BaseView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enemybaseview">EnemyBaseView</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Code Character</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>UnitViews</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/views.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unitviews">
+<h1>UnitViews<a class="headerlink" href="#unitviews" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pathplannerhelperview">
+<h2>PathPlannerHelperView<a class="headerlink" href="#pathplannerhelperview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state21PathPlannerHelperViewE">
+<span id="state::PathPlannerHelperView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">PathPlannerHelperView</code><a class="headerlink" href="#_CPPv2N5state21PathPlannerHelperViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helps units path plan</p>
+<p>Provides utility methods for units</p>
+<dl class="function">
+<dt id="_CPPv2N5state21PathPlannerHelperView14IsPathPlanningEv">
+<span id="state::PathPlannerHelperView::IsPathPlanning"></span>bool <code class="descclassname"></code><code class="descname">IsPathPlanning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state21PathPlannerHelperView14IsPathPlanningEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if the unit is path planning, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="unitview">
+<h2>UnitView<a class="headerlink" href="#unitview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state8UnitViewE">
+<span id="state::UnitView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">UnitView</code><a class="headerlink" href="#_CPPv2N5state8UnitViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own units</p>
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView5GetIdEv">
+<span id="state::UnitView::GetId"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">GetId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView5GetIdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the Actor ID of your unit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView5GetHpEv">
+<span id="state::UnitView::GetHp"></span>int64_t <code class="descclassname"></code><code class="descname">GetHp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView5GetHpEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your unit&#8217;s current HP</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView8GetMaxHpEv">
+<span id="state::UnitView::GetMaxHp"></span>int64_t <code class="descclassname"></code><code class="descname">GetMaxHp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView8GetMaxHpEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your unit&#8217;s maximum HP</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView11GetMaxSpeedEv">
+<span id="state::UnitView::GetMaxSpeed"></span>int64_t <code class="descclassname"></code><code class="descname">GetMaxSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView11GetMaxSpeedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the maximum speed at which your unit can travel</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView7GetSizeEv">
+<span id="state::UnitView::GetSize"></span>int64_t <code class="descclassname"></code><code class="descname">GetSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView7GetSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your unit&#8217;s radius</p>
+<p>Assumes your unit is a circle</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView12GetActorTypeEv">
+<span id="state::UnitView::GetActorType"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state9ActorTypeE" title="state::ActorType">ActorType</a> <code class="descclassname"></code><code class="descname">GetActorType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView12GetActorTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets your unit&#8217;s ActorType</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView9CanAttackEv">
+<span id="state::UnitView::CanAttack"></span>bool <code class="descclassname"></code><code class="descname">CanAttack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView9CanAttackEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if your unit can attack, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView11CanPathPlanEv">
+<span id="state::UnitView::CanPathPlan"></span>bool <code class="descclassname"></code><code class="descname">CanPathPlan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView11CanPathPlanEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if your unit can move, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView15GetAttackTargetE7success">
+<span id="state::UnitView::GetAttackTarget__success"></span>state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> *<code class="descclassname"></code><code class="descname">GetAttackTarget</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N5state8UnitView15GetAttackTarget7successE" title="state::UnitView::GetAttackTarget::success">success</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView15GetAttackTargetE7success" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the EnemyUnitView of the target that this unit is currently attacking</p>
+<p>Returns <code class="docutils literal"><span class="pre">nullptr</span></code> if not attacking any unit</p>
+<p>The parameter success&#8217;s value is set if not <code class="docutils literal"><span class="pre">NULL</span></code> and it indicates the outcome of the call</p>
+<p>success is:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">0</span></code> if your unit is not attacking another unit at the moment</li>
+<li><code class="docutils literal"><span class="pre">1</span></code> if your unit is currently attacking another unit</li>
+</ul>
+<p><strong>Parameters</strong>:</p>
+<blockquote>
+<div><dl class="var">
+<dt id="_CPPv2N5state8UnitView15GetAttackTarget7successE">
+<span id="state::UnitView::GetAttackTarget::success__iP"></span>int *<code class="descclassname"></code><code class="descname">success</code><a class="headerlink" href="#_CPPv2N5state8UnitView15GetAttackTarget7successE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>If valid pointer (not <code class="docutils literal"><span class="pre">NULL</span></code>), holds success of function call</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView11GetVelocityEv">
+<span id="state::UnitView::GetVelocity"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">GetVelocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView11GetVelocityEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the velocity vector of this unit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView14GetAttackRangeEv">
+<span id="state::UnitView::GetAttackRange"></span>int64_t <code class="descclassname"></code><code class="descname">GetAttackRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView14GetAttackRangeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the attack range of your unit</p>
+<p>Your unit can only attack units within its attack range</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView11GetPositionEv">
+<span id="state::UnitView::GetPosition"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">GetPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView11GetPositionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the position vector of this unit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8UnitView20GetPathPlannerHelperEv">
+<span id="state::UnitView::GetPathPlannerHelper"></span>state::<a class="reference internal" href="#_CPPv2N5state21PathPlannerHelperViewE" title="state::PathPlannerHelperView">PathPlannerHelperView</a> <code class="descclassname"></code><code class="descname">GetPathPlannerHelper</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8UnitView20GetPathPlannerHelperEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets an interface to this unit&#8217;s PathPlannerHelper</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enemyunitview">
+<h2>EnemyUnitView<a class="headerlink" href="#enemyunitview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state13EnemyUnitViewE">
+<span id="state::EnemyUnitView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">EnemyUnitView</code><a class="headerlink" href="#_CPPv2N5state13EnemyUnitViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s units</p>
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView5GetIdEv">
+<span id="state::EnemyUnitView::GetId"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state8act_id_tE" title="state::act_id_t">act_id_t</a> <code class="descclassname"></code><code class="descname">GetId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView5GetIdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the ID of the enemy unit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView11GetPositionEv">
+<span id="state::EnemyUnitView::GetPosition"></span>physics::<a class="reference internal" href="vector2d.html#_CPPv2N7physics8Vector2DE" title="physics::Vector2D">Vector2D</a> <code class="descclassname"></code><code class="descname">GetPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView11GetPositionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the position vector of the enemy unit in cartesian coordinates</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView12GetActorTypeEv">
+<span id="state::EnemyUnitView::GetActorType"></span>state::<a class="reference internal" href="utilities.html#_CPPv2N5state9ActorTypeE" title="state::ActorType">ActorType</a> <code class="descclassname"></code><code class="descname">GetActorType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView12GetActorTypeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the ActorType of the enemy unit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView9CanAttackEv">
+<span id="state::EnemyUnitView::CanAttack"></span>bool <code class="descclassname"></code><code class="descname">CanAttack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView9CanAttackEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if the enemy unit can attack, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView11CanPathPlanEv">
+<span id="state::EnemyUnitView::CanPathPlan"></span>bool <code class="descclassname"></code><code class="descname">CanPathPlan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView11CanPathPlanEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if the enemy unit can move, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView7GetSizeEv">
+<span id="state::EnemyUnitView::GetSize"></span>int64_t <code class="descclassname"></code><code class="descname">GetSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView7GetSizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the radius of the enemy unit</p>
+<p>Assumes units are circles</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyUnitView5GetHpEv">
+<span id="state::EnemyUnitView::GetHp"></span>int64_t <code class="descclassname"></code><code class="descname">GetHp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyUnitView5GetHpEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the HP of the enemy unit</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="swordsmanview">
+<h2>SwordsmanView<a class="headerlink" href="#swordsmanview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state13SwordsmanViewE">
+<span id="state::SwordsmanView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a> <code class="descclassname">state::</code><code class="descname">SwordsmanView</code><a class="headerlink" href="#_CPPv2N5state13SwordsmanViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Swordsmen</p>
+</dd></dl>
+
+</div>
+<div class="section" id="enemyswordsmanview">
+<h2>EnemySwordsmanView<a class="headerlink" href="#enemyswordsmanview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state18EnemySwordsmanViewE">
+<span id="state::EnemySwordsmanView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> <code class="descclassname">state::</code><code class="descname">EnemySwordsmanView</code><a class="headerlink" href="#_CPPv2N5state18EnemySwordsmanViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Swordsmen</p>
+</dd></dl>
+
+</div>
+<div class="section" id="towerview">
+<h2>TowerView<a class="headerlink" href="#towerview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state9TowerViewE">
+<span id="state::TowerView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">TowerView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a><a class="headerlink" href="#_CPPv2N5state9TowerViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Towers</p>
+<dl class="function">
+<dt id="_CPPv2N5state9TowerView14GetFireBallTtlEv">
+<span id="state::TowerView::GetFireBallTtl"></span>int64_t <code class="descclassname"></code><code class="descname">GetFireBallTtl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state9TowerView14GetFireBallTtlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The time that a FireBall fired by this Tower is alive for</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state9TowerView16GetFireBallSpeedEv">
+<span id="state::TowerView::GetFireBallSpeed"></span>int64_t <code class="descclassname"></code><code class="descname">GetFireBallSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state9TowerView16GetFireBallSpeedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the speed of FireBalls that are fired by this Tower</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state9TowerView19GetContentionRadiusEv">
+<span id="state::TowerView::GetContentionRadius"></span>int64_t <code class="descclassname"></code><code class="descname">GetContentionRadius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state9TowerView19GetContentionRadiusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the radius within which units must be present to contend for
+ownership of the Tower after its HP has been reduced to zero</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state9TowerView18GetContentionScoreEv">
+<span id="state::TowerView::GetContentionScore"></span>float <code class="descclassname"></code><code class="descname">GetContentionScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state9TowerView18GetContentionScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the contention score for this Tower. If positive, the capture
+is proceeding in your favor, if negative, the enemy is closer to capturing
+it. It is 0 for Towers that still have some HP left.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state9TowerView21GetMaxContentionScoreEv">
+<span id="state::TowerView::GetMaxContentionScore"></span>int64_t <code class="descclassname"></code><code class="descname">GetMaxContentionScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state9TowerView21GetMaxContentionScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The value the contention score must reach for the Tower to be captured by you.
+If it reaches the negative of this value, the Tower is captured by the enemy.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enemytowerview">
+<h2>EnemyTowerView<a class="headerlink" href="#enemytowerview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state14EnemyTowerViewE">
+<span id="state::EnemyTowerView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">EnemyTowerView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a><a class="headerlink" href="#_CPPv2N5state14EnemyTowerViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Towers</p>
+<dl class="function">
+<dt id="_CPPv2N5state14EnemyTowerView19GetContentionRadiusEv">
+<span id="state::EnemyTowerView::GetContentionRadius"></span>int64_t <code class="descclassname"></code><code class="descname">GetContentionRadius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state14EnemyTowerView19GetContentionRadiusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the radius within which units must be present to contend for
+ownership of the Tower after its HP has been reduced to zero</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state14EnemyTowerView18GetContentionScoreEv">
+<span id="state::EnemyTowerView::GetContentionScore"></span>float <code class="descclassname"></code><code class="descname">GetContentionScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state14EnemyTowerView18GetContentionScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the contention score for this Tower. If positive, the capture
+is proceeding in your favor, if negative, the enemy is closer to capturing
+it. It is 0 for Towers that still have some HP left.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state14EnemyTowerView21GetMaxContentionScoreEv">
+<span id="state::EnemyTowerView::GetMaxContentionScore"></span>int64_t <code class="descclassname"></code><code class="descname">GetMaxContentionScore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state14EnemyTowerView21GetMaxContentionScoreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The value the contention score must reach for the Tower to be captured by you.
+If it reaches the negative of this value, the Tower is captured by the enemy.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="magicianview">
+<h2>MagicianView<a class="headerlink" href="#magicianview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state12MagicianViewE">
+<span id="state::MagicianView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">MagicianView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a><a class="headerlink" href="#_CPPv2N5state12MagicianViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Magicians</p>
+<dl class="function">
+<dt id="_CPPv2N5state12MagicianView14GetFireBallTtlEv">
+<span id="state::MagicianView::GetFireBallTtl"></span>int64_t <code class="descclassname"></code><code class="descname">GetFireBallTtl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state12MagicianView14GetFireBallTtlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The time that a FireBall fired by this Magician is alive for</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state12MagicianView16GetFireBallSpeedEv">
+<span id="state::MagicianView::GetFireBallSpeed"></span>int64_t <code class="descclassname"></code><code class="descname">GetFireBallSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state12MagicianView16GetFireBallSpeedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the speed of FireBalls that are fired by this Magician</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enemymagicianview">
+<h2>EnemyMagicianView<a class="headerlink" href="#enemymagicianview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state17EnemyMagicianViewE">
+<span id="state::EnemyMagicianView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> <code class="descclassname">state::</code><code class="descname">EnemyMagicianView</code><a class="headerlink" href="#_CPPv2N5state17EnemyMagicianViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Magicians</p>
+</dd></dl>
+
+</div>
+<div class="section" id="scoutview">
+<h2>ScoutView<a class="headerlink" href="#scoutview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state9ScoutViewE">
+<span id="state::ScoutView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a> <code class="descclassname">state::</code><code class="descname">ScoutView</code><a class="headerlink" href="#_CPPv2N5state9ScoutViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Scouts</p>
+</dd></dl>
+
+</div>
+<div class="section" id="enemyscoutview">
+<h2>EnemyScoutView<a class="headerlink" href="#enemyscoutview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state14EnemyScoutViewE">
+<span id="state::EnemyScoutView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> <code class="descclassname">state::</code><code class="descname">EnemyScoutView</code><a class="headerlink" href="#_CPPv2N5state14EnemyScoutViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Scouts</p>
+</dd></dl>
+
+</div>
+<div class="section" id="kingview">
+<h2>KingView<a class="headerlink" href="#kingview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state8KingViewE">
+<span id="state::KingView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">KingView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a><a class="headerlink" href="#_CPPv2N5state8KingViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Kings</p>
+<dl class="function">
+<dt id="_CPPv2N5state8KingView7HasFlagEv">
+<span id="state::KingView::HasFlag"></span>bool <code class="descclassname"></code><code class="descname">HasFlag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8KingView7HasFlagEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if your King is carrying the enemy&#8217;s flag, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enemykingview">
+<h2>EnemyKingView<a class="headerlink" href="#enemykingview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state13EnemyKingViewE">
+<span id="state::EnemyKingView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">EnemyKingView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a><a class="headerlink" href="#_CPPv2N5state13EnemyKingViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Kings</p>
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyKingView7HasFlagEv">
+<span id="state::EnemyKingView::HasFlag"></span>bool <code class="descclassname"></code><code class="descname">HasFlag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyKingView7HasFlagEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">true</span></code> if the enemy King is carrying your flag, <code class="docutils literal"><span class="pre">false</span></code> otherwise</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="flagview">
+<h2>FlagView<a class="headerlink" href="#flagview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state8FlagViewE">
+<span id="state::FlagView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a> <code class="descclassname">state::</code><code class="descname">FlagView</code><a class="headerlink" href="#_CPPv2N5state8FlagViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Flags</p>
+</dd></dl>
+
+</div>
+<div class="section" id="enemyflagview">
+<h2>EnemyFlagView<a class="headerlink" href="#enemyflagview" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv2N5state13EnemyFlagViewE">
+<span id="state::EnemyFlagView"></span><em class="property">typedef </em>state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a> <code class="descclassname">state::</code><code class="descname">EnemyFlagView</code><a class="headerlink" href="#_CPPv2N5state13EnemyFlagViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Flags</p>
+</dd></dl>
+
+</div>
+<div class="section" id="baseview">
+<h2>BaseView<a class="headerlink" href="#baseview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state8BaseViewE">
+<span id="state::BaseView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">BaseView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state8UnitViewE" title="state::UnitView">UnitView</a><a class="headerlink" href="#_CPPv2N5state8BaseViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with an interface to work with your own Bases</p>
+<dl class="function">
+<dt id="_CPPv2N5state8BaseView22GetBasePoisoningRadiusEv">
+<span id="state::BaseView::GetBasePoisoningRadius"></span>int64_t <code class="descclassname"></code><code class="descname">GetBasePoisoningRadius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8BaseView22GetBasePoisoningRadiusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the radius within which if an excess of your units are present,
+you slowly lose points from your score</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state8BaseView25GetBasePoisoningThresholdEv">
+<span id="state::BaseView::GetBasePoisoningThreshold"></span>int64_t <code class="descclassname"></code><code class="descname">GetBasePoisoningThreshold</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state8BaseView25GetBasePoisoningThresholdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the poisoning threshold. If the number of your units minus the number
+of enemy units within the <code class="docutils literal"><span class="pre">base_poisoning_radius</span></code> exceeds this threshold,
+you slowly lose points from your score</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="enemybaseview">
+<h2>EnemyBaseView<a class="headerlink" href="#enemybaseview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="_CPPv2N5state13EnemyBaseViewE">
+<span id="state::EnemyBaseView"></span><em class="property">class </em><code class="descclassname">state::</code><code class="descname">EnemyBaseView</code> : <em class="property">public</em> state::<a class="reference internal" href="#_CPPv2N5state13EnemyUnitViewE" title="state::EnemyUnitView">EnemyUnitView</a><a class="headerlink" href="#_CPPv2N5state13EnemyBaseViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides you with a restricted interface to work with your enemy&#8217;s Bases</p>
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyBaseView22GetBasePoisoningRadiusEv">
+<span id="state::EnemyBaseView::GetBasePoisoningRadius"></span>int64_t <code class="descclassname"></code><code class="descname">GetBasePoisoningRadius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyBaseView22GetBasePoisoningRadiusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the radius within which if an excess of the enemy&#8217;s units are present,
+the enemy slowly loses points from their score</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N5state13EnemyBaseView25GetBasePoisoningThresholdEv">
+<span id="state::EnemyBaseView::GetBasePoisoningThreshold"></span>int64_t <code class="descclassname"></code><code class="descname">GetBasePoisoningThreshold</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N5state13EnemyBaseView25GetBasePoisoningThresholdEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the poisoning threshold. If the number of the enemy&#8217;s units minus the number
+of your units within the <code class="docutils literal"><span class="pre">base_poisoning_radius</span></code> exceeds this threshold,
+the enemy slowly loses points from its score</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="player_state_handler.html" class="btn btn-neutral" title="PlayerStateHandler" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delta Force.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

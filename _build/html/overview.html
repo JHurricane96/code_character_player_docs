@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Code Character  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Code Character  documentation" href="index.html"/>
+        <link rel="next" title="Vector2D" href="vector2d.html"/>
+        <link rel="prev" title="Welcome to Code Character’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Code Character
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plot">Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#game-elements-overview">Game Elements Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#actors">Actors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#death-and-respawning">Death and Respawning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#map">Map</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#line-of-sight">Line of Sight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#game-mechanics">Game Mechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#progressing">Progressing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execution-order">Execution Order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-available">API available</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scoring">Scoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#victory">Victory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-language-restrictions">C++ language Restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vector2d.html">Vector2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="player_state_handler.html">PlayerStateHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">UnitViews</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Code Character</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to Code Character!</p>
+<p>Set in a 2D world, each player is given an army that can be controlled with
+everyone&#8217;s favourite programming language, C++ :)</p>
+<p>The objective is simple enough. Implement a strategy that allows your army to
+capture the enemy&#8217;s flag more times than the enemy captures yours. Oh yeah,
+there&#8217;s a timer too.</p>
+<p>The AIs could be as simple as a couple lines of code or as complex as rocket
+science.</p>
+<p>Good luck!</p>
+<div class="section" id="plot">
+<h2>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h2>
+<p>On a beautiful autumn day, you take a stroll through your garden, watching the
+brown leaves dance in the wind.</p>
+<p>Suddenly, you hear a voice in your head. It whispers to you, caresses, embraces
+you. Then it tells you that in a hundred other kingdoms, a hundred other
+kings are enjoying the exact same day, each content with their own little
+piece of land.</p>
+<p>&#8216;Your people are poor, there is no trade between kingdoms, and winter is coming.
+Yet you choose to walk in your garden, content with your accomplishments, such as they are.&#8217;</p>
+<p>On hearing these words, you are filled with shame, for you know them to be true.</p>
+<p>&#8216;What do I do?&#8217; you ask desperately. &#8216;How do I bring light to my kingdom cast in darkness?&#8217;</p>
+<p>&#8216;Unite these kingdoms. Conquer them with fire and sword. Bring them all under your rule.</p>
+<p>&#8216;Only where there is unity can there be peace.&#8217;</p>
+</div>
+<div class="section" id="game-elements-overview">
+<h2>Game Elements Overview<a class="headerlink" href="#game-elements-overview" title="Permalink to this headline">¶</a></h2>
+<p>The world has 2 main components that you&#8217;ll be interacting with:</p>
+<ul class="simple">
+<li>The actors</li>
+<li>The terrain</li>
+</ul>
+<div class="section" id="actors">
+<h3>Actors<a class="headerlink" href="#actors" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="12%" />
+<col width="9%" />
+<col width="13%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Base</th>
+<th class="head">Flag</th>
+<th class="head">King</th>
+<th class="head">Magician</th>
+<th class="head">Scout</th>
+<th class="head">Swordsman</th>
+<th class="head">Tower</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Number of units*</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+<td>1</td>
+<td>20</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>HP</td>
+<td>-</td>
+<td>-</td>
+<td>400</td>
+<td>150</td>
+<td>300</td>
+<td>200</td>
+<td>600</td>
+</tr>
+<tr class="row-even"><td>Can Move</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr class="row-odd"><td>Can Attack</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>Speed</td>
+<td>-</td>
+<td>-</td>
+<td>10</td>
+<td>30</td>
+<td>37</td>
+<td>20</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>Attack Power</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>50</td>
+<td>-</td>
+<td>20</td>
+<td>80</td>
+</tr>
+<tr class="row-even"><td>Attack Range</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>600</td>
+<td>-</td>
+<td>30</td>
+<td>1000</td>
+</tr>
+<tr class="row-odd"><td>Attack recharge time</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>0.83s</td>
+<td>-</td>
+<td>0.33s</td>
+<td>1.33s</td>
+</tr>
+<tr class="row-even"><td>Respawn Time</td>
+<td>-</td>
+<td>-</td>
+<td>7s</td>
+<td>2s</td>
+<td>3s</td>
+<td>1.5s</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>LOS Radius**</td>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">*  Per team at the start of the game</div>
+<div class="line"><br /></div>
+<div class="line">** LOS Radius is in terms of <code class="docutils literal"><span class="pre">TerrainElements</span></code></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>There are 4 types of moveable actors that the user can control:</p>
+<ul class="simple">
+<li>King (That&#8217;s you, my liege :) )<ul>
+<li>Each side has one king</li>
+<li>The King is the only unit that can capture and move the enemy flag</li>
+</ul>
+</li>
+<li>Magician<ul>
+<li>The magician can conjure up fireballs that home in on the intended target</li>
+<li>They make it easy to bring light to your kingdom cast in darkness</li>
+</ul>
+</li>
+<li>Scout<ul>
+<li>The nefarious scout uses its guile to be invisible to enemies except when
+it wanders near a base or a tower</li>
+</ul>
+</li>
+<li>Swordsman<ul>
+<li>A sword-wielding strongman</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="death-and-respawning">
+<h4>Death and Respawning<a class="headerlink" href="#death-and-respawning" title="Permalink to this headline">¶</a></h4>
+<p>When Actors die, they&#8217;re added to the respawn queue.</p>
+<p>The list of actors ready to be respawned can be obtained with a call to
+<a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler15GetRespawnablesEv" title="state::PlayerStateHandler::GetRespawnables"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::GetRespawnables()</span></code></a> and the actors themselves
+can be respawned by calling the
+<a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler11RespawnUnitE8actor_id16respawn_location7success" title="state::PlayerStateHandler::RespawnUnit"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::RespawnUnit()</span></code></a> function</p>
+<p>The other components include:</p>
+<ul class="simple">
+<li>Base<ul>
+<li>Each team has a base where the flag is positioned initially</li>
+<li>Park too many units near the base and you get docked points, &#8216;cause winter&#8217;s coming and your
+villagers really need that sugar from the enemy kingdom :(</li>
+<li>Dead units ready to be respawned can be respawned either at the base or at
+one of the towers that you own</li>
+</ul>
+</li>
+<li>Fire Ball<ul>
+<li>Is conjured up by a Magician when the magician wants to attack an enemy</li>
+</ul>
+</li>
+<li>Flag<ul>
+<li>The object of everyone&#8217;s desire: The other player wants it; you want to be with it</li>
+</ul>
+</li>
+<li>Tower<ul>
+<li>Imbued with magic by your magicians, your towers are a symbol of power and a rally point for your troops</li>
+<li>They can fire fireballs at enemy troops</li>
+<li>Your units can be respawned at the towers too</li>
+<li>Tower Ownership:<ul>
+<li>Towers can change ownership when their HP has been brought down to zero
+after which it is contended for.</li>
+<li>During the contention period, both players try to occupy the region around the tower</li>
+<li>The numerical advantage in troops at the end of every tick is added to
+the contention score.</li>
+<li>When the contention score reaches 100, the player who hit the maximum
+contention score assumes tower ownership</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="map">
+<h3>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The terrain is a 30x30 grid where each element is either a:<ul>
+<li>Plain<ul>
+<li>Normal stuff</li>
+</ul>
+</li>
+<li>Forest<ul>
+<li>Attacking range and visibility reduce when units are in the forest</li>
+</ul>
+</li>
+<li>Mountain<ul>
+<li>Attacking range and visibility increase when units are in the forest</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Each element is called a <code class="docutils literal"><span class="pre">TerrainElement</span></code> (See: <a class="reference internal" href="player_state_handler.html#_CPPv2N5state18TerrainElementViewE" title="state::TerrainElementView"><code class="xref cpp cpp-class docutils literal"><span class="pre">state::TerrainElementView</span></code></a>). Its size is 200x200 units.</p>
+<p>There are two ways of addressing TerrainElements: by offsets and by cartesian coordinates.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Cartesian coordinates:</dt>
+<dd>The origin is at the top left corner of the map.
+Right is increasing X, down is increasing Y.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Offsets:</dt>
+<dd>The origin is at the top left corner of the map.
+It&#8217;s a pair, of which the first element is the row number.
+The second number is the column number.
+Numbering starts from 0.</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="line-of-sight">
+<h4>Line of Sight<a class="headerlink" href="#line-of-sight" title="Permalink to this headline">¶</a></h4>
+<p>Each actor has a line of sight radius defined in terms of grid elements.
+For a player, each grid element is in one of 3 states:</p>
+<ul class="simple">
+<li>Unexplored<ul>
+<li>Self explanatory. The player&#8217;s troops haven&#8217;t yet set foot on this piece of
+terrain</li>
+<li>The unexplored regions are shrouded in darkness and the players will not be
+able to see what lies underneath</li>
+</ul>
+</li>
+<li>Explored<ul>
+<li>The player&#8217;s troops were at this point some time in the past but are not
+there presently</li>
+<li>Explored regions are partially unmasked.<ul>
+<li>The terrain type and towers (if present on the grid element) will continue
+to be visible to the players for the rest of the game</li>
+<li>The enemy actors (again if present on this piece of terrain), however,
+will not the visible</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Direct LOS<ul>
+<li>A grid element is in direct LOS if any of the player&#8217;s troops are on it at
+the moment.</li>
+<li>Everything, including enemy actors are fully visible</li>
+<li>The player&#8217;s actors can only attack those troops that are in direct LOS</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="game-mechanics">
+<h2>Game Mechanics<a class="headerlink" href="#game-mechanics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="progressing">
+<h3>Progressing<a class="headerlink" href="#progressing" title="Permalink to this headline">¶</a></h3>
+<p>The preliminary round will consist of 3 levels each accompanied by an AI of
+increasing intelligence bundled in with the application.</p>
+<p>The second round has been cancelled. The top three in the leaderboard in round 1
+get prizes.</p>
+<p>The event ends on March 5th, at 23:59 hours.</p>
+</div>
+<div class="section" id="execution-order">
+<h3>Execution Order<a class="headerlink" href="#execution-order" title="Permalink to this headline">¶</a></h3>
+<p>The smallest unit of time in the game is a clock tick.</p>
+<p>There are 2 update cycles that keep the game ticking</p>
+<ul class="simple">
+<li>The player update cycle<ul>
+<li>Each player gets their own thread of execution and an individual copy of the
+game state that they work with.</li>
+<li>Each thread executes the code defined in the playerAI&#8217;s <code class="docutils literal"><span class="pre">Update</span></code> method.</li>
+<li>A player&#8217;s update cycle may take more than one clock tick. However, at the end
+of the first clock tick, the player&#8217;s copy of the game state will become stale,
+so a tradeoff between strategy and speed must be made.</li>
+</ul>
+</li>
+<li>The main update cycle<ul>
+<li>The main update cycle has its own thread which it uses to update the state
+every clock tick.</li>
+<li>Actor positions, HP and Lines Of Sight are updated.</li>
+<li>If a player was done with his/her update cycle, the main thread also updates
+the player&#8217;s copy of the game state.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="api-available">
+<h3>API available<a class="headerlink" href="#api-available" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler9MoveUnitsE8unit_ids11destination15formation_maker15terrain_weights4path7success" title="state::PlayerStateHandler::MoveUnits"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::MoveUnits()</span></code></a>,
+<a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler10AttackUnitE12attacker_ids16attack_target_id7success" title="state::PlayerStateHandler::AttackUnit"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::AttackUnit()</span></code></a>,
+<a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler11FlagCaptureE7success" title="state::PlayerStateHandler::FlagCapture"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::FlagCapture()</span></code></a>,
+<a class="reference internal" href="player_state_handler.html#_CPPv2N5state18PlayerStateHandler8PlanPathE5start11destination15terrain_weights4path7success" title="state::PlayerStateHandler::PlanPath"><code class="xref cpp cpp-func docutils literal"><span class="pre">state::PlayerStateHandler::PlanPath()</span></code></a></p>
+<p>For more extensive explanations and a complete list of functions, do check out
+the full documentation available on this site.</p>
+</div>
+</div>
+<div class="section" id="scoring">
+<h2>Scoring<a class="headerlink" href="#scoring" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>50 points for capturing the flag, ie, Moving the flag from the enemy base all
+the way to yours.</li>
+<li>-ve points due to base poisoning.<ul>
+<li>Base poisoning is when players are docked points for camping near their base.</li>
+<li>The <code class="docutils literal"><span class="pre">base_poisoning_threshold</span></code> is the maximum numerical advantage that a
+player can have over his opponent in terms of number of troops positioned
+near his base for which base poisoning doesn&#8217;t apply.</li>
+</ul>
+</li>
+<li>1 point per tower every ten seconds you hold it. So holding 2 towers for 15 seconds
+will net you 3 points.</li>
+</ul>
+</div>
+<div class="section" id="victory">
+<h2>Victory<a class="headerlink" href="#victory" title="Permalink to this headline">¶</a></h2>
+<p>The player with the higher score at the end of 5 minutes is the winner.</p>
+</div>
+<div class="section" id="c-language-restrictions">
+<h2>C++ language Restrictions<a class="headerlink" href="#c-language-restrictions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>No external libraries are allowed<ul>
+<li>You may only use the C++ standard library</li>
+</ul>
+</li>
+<li>No filesystem calls<ul>
+<li>Files should not be created or read from</li>
+</ul>
+</li>
+<li>No spawning threads/processes</li>
+<li>Maximum total file size submission is 8 MB</li>
+</ul>
+<p>If any of the restrictions are violated, the code will not be evaluated</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Documentation on this page</li>
+<li>C++ Tutorials<ul>
+<li><a class="reference external" href="https://isocpp.org/get-started">https://isocpp.org/get-started</a></li>
+<li><a class="reference external" href="http://ureddit.com/class/23620/introduction-to-c----a-video-guided-tutorial">http://ureddit.com/class/23620/introduction-to-c&#8212;-a-video-guided-tutorial</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vector2d.html" class="btn btn-neutral float-right" title="Vector2D" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Code Character’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Delta Force.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
