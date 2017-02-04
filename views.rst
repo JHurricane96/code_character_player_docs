@@ -37,19 +37,44 @@ UnitView
 
 		Gets the maximum speed at which your unit can travel
 
+	.. cpp:function:: int64_t GetSize()
+
+		Gets your unit's radius
+
+		Assumes your unit is a circle
+
 	.. cpp:function:: state::ActorType GetActorType()
 
 		Gets your unit's ActorType
 
-	.. cpp:function:: state::EnemyUnitView GetAttackTarget()
+	.. cpp:function:: state::EnemyUnitView* GetAttackTarget(success)
 
 		Gets the EnemyUnitView of the target that this unit is currently attacking
 
 		Returns ``nullptr`` if not attacking any unit
 
+		The parameter success's value is set if not ``NULL`` and it indicates the outcome of the call
+
+		success is:
+
+		* ``0`` if your unit is not attacking another unit at the moment
+		* ``1`` if your unit is currently attacking another unit
+
+		**Parameters**:
+
+			.. cpp:var:: int* success
+
+				If valid pointer (not ``NULL``), holds success of function call
+
 	.. cpp:function:: physics::Vector2D GetVelocity()
 
 		Gets the velocity vector of this unit
+
+	.. cpp:function:: int64_t GetAttackRange()
+
+		Gets the attack range of your unit
+
+		Your unit can only attack units within its attack range
 
 	.. cpp:function:: physics::Vector2D GetPosition()
 
@@ -57,7 +82,7 @@ UnitView
 
 	.. cpp:function:: state::PathPlannerHelperView GetPathPlannerHelper()
 
-		Gets this unit's PathPlannerHelper
+		Gets an interface to this unit's PathPlannerHelper
 
 EnemyUnitView
 -------------
@@ -77,6 +102,16 @@ EnemyUnitView
 	.. cpp:function:: state::ActorType GetActorType()
 
 		Gets the ActorType of the enemy unit
+
+	.. cpp:function:: int64_t GetSize()
+
+		Gets the radius of the enemy unit
+
+		Assumes units are circles
+
+	.. cpp:function:: int64_t GetHp()
+
+		Gets the HP of the enemy unit
 
 SwordsmanView
 -------------
