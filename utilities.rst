@@ -8,6 +8,8 @@ Actor ID
 
 	Type for Actor IDs
 
+	An Actor ID uniquely identifies an Actor
+
 List of Actor IDs
 -----------------
 
