@@ -119,6 +119,43 @@ FormationMaker
 
 	The rest of the units follow the leader, and their elements contain positions relative to the leader's
 
+	.. highlight:: cpp
+	Example usage::
+
+		using namespace std;
+		using namespace physics;
+		using namespace state;
+
+		class SimpleFormation : public FormationMaker {
+			vector<Vector2D> ReturnFormation(int64_t formation_size) {
+				// Creates and returns a list of Vector2D's, all set to (0, 0)
+				// This means all units will move together
+				return vector<Vector2D>(
+					formation_size,
+					Vector2D(0, 0)
+				);
+			}
+		};
+
+		class RectangleFormation : public FormationMaker {
+			vector<Vector2D> ReturnFormation(int64_t formation_size) {
+				// This returns a rectangle formation
+				// It is as close to a square as possible
+				int length = floor(sqrt(formation_size));
+				vector<Vector2D> positions;
+				int j = 0;
+				int k = 0;
+				for (int i = 0; i < formation_size; ++i) {
+					positions.push_back(Vector2D(k * 10, j * 10));
+					j = (j + 1) % length;
+					if (j == 0) {
+						k++;
+					}
+				}
+				return positions;
+			}
+		};
+
 	.. cpp:function:: virtual std::vector<physics::Vector2D> ReturnFormation(formation_size) = 0
 
 		This method must be overriden and implemented

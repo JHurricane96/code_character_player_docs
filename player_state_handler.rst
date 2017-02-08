@@ -33,9 +33,15 @@ PlayerStateHandler
 
 	The interface for accessing and manipulating the internal state of the game
 
+	**NOTE**:
+
+		The getters for all your own units also return dead units
+
 	.. cpp:function:: state::list_act_id_t GetPlayerUnitIds()
 
 		Gets Actor IDs of your units
+
+		Returns **all** units, including flag, base, dead units, etc
 
 	.. cpp:function:: state::list_act_id_t GetPlayerEnemyIds()
 
@@ -85,7 +91,7 @@ PlayerStateHandler
 		
 		success is:
 
-		* ``0``  if the enemy King is not in your Line Of Sight
+		* ``0``  if the enemy King is not in your Line Of Sight/is dead
 		* ``1``  if the King is retrieved
 
 		Returns ``nullptr`` if the enemy King isn't in your LOS
@@ -129,7 +135,7 @@ PlayerStateHandler
 
 			.. cpp:var:: physics::Vector2D position
 
-				The position vector in x, y coordinates
+				The position vector in x, y cartesian coordinates
 
 			.. cpp:var:: int* success
 
@@ -207,7 +213,7 @@ PlayerStateHandler
 
 		* ``0``  if actor id is invalid
 		* ``-1`` if actor does not belong to the enemy
-		* ``-2`` if actor is not in your Line Of Sight
+		* ``-2`` if actor is not in your Line Of Sight/is dead
 		* ``1``  if successful
 
 		**Parameters:**
@@ -219,6 +225,14 @@ PlayerStateHandler
 			.. cpp:var:: int* success
 
 				If valid pointer (not ``NULL``), holds success of function call
+
+	.. cpp:function:: int64_t GetScore()
+
+		Returns your score
+
+	.. cpp:function:: int64_t GetEnemyScore()
+
+		Returns your enemy's score
 
 	.. cpp:function:: state::list_act_id_t GetRespawnables()
 
@@ -243,6 +257,8 @@ PlayerStateHandler
 
 		The parameter success's value is set if not ``NULL`` and it
 		indicates the outcome of the call.
+
+		This method is meant to be called once to move units, and is hence best for long journeys.
 		
 		success is:
 
@@ -307,6 +323,9 @@ PlayerStateHandler
 		
 		The parameter success's value is set if not ``NULL`` and it
 		indicates the outcome of the call.
+
+		This method can be called repeatedly on moving units, and is best used
+		when terrain avoidance/preference is not required.
 		
 		success is:
 		

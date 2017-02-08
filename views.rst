@@ -47,6 +47,14 @@ UnitView
 
 		Gets your unit's ActorType
 
+	.. cpp:function:: bool CanAttack()
+
+		Returns ``true`` if your unit can attack, ``false`` otherwise
+
+	.. cpp:function:: bool CanPathPlan()
+
+		Returns ``true`` if your unit can move, ``false`` otherwise
+
 	.. cpp:function:: state::EnemyUnitView* GetAttackTarget(success)
 
 		Gets the EnemyUnitView of the target that this unit is currently attacking
@@ -103,6 +111,14 @@ EnemyUnitView
 
 		Gets the ActorType of the enemy unit
 
+	.. cpp:function:: bool CanAttack()
+
+		Returns ``true`` if the enemy unit can attack, ``false`` otherwise
+
+	.. cpp:function:: bool CanPathPlan()
+
+		Returns ``true`` if the enemy unit can move, ``false`` otherwise
+
 	.. cpp:function:: int64_t GetSize()
 
 		Gets the radius of the enemy unit
@@ -134,18 +150,29 @@ TowerView
 
 	Provides you with an interface to work with your own Towers
 
-	.. cpp:function:: GetFireBallTtl()
+	.. cpp:function:: int64_t GetFireBallTtl()
 
 		The time that a FireBall fired by this Tower is alive for
 
-	.. cpp:function:: GetFireBallSpeed()
+	.. cpp:function:: int64_t GetFireBallSpeed()
 
 		Gets the speed of FireBalls that are fired by this Tower
 
-	.. cpp:function:: GetContentionRadius()
+	.. cpp:function:: int64_t GetContentionRadius()
 
 		Gets the radius within which units must be present to contend for 
 		ownership of the Tower after its HP has been reduced to zero
+
+	.. cpp:function:: float GetContentionScore()
+
+		Gets the contention score for this Tower. If positive, the capture
+		is proceeding in your favor, if negative, the enemy is closer to capturing
+		it. It is 0 for Towers that still have some HP left.
+
+	.. cpp:function:: int64_t GetMaxContentionScore()
+
+		The value the contention score must reach for the Tower to be captured by you.
+		If it reaches the negative of this value, the Tower is captured by the enemy.
 
 EnemyTowerView
 --------------
@@ -159,6 +186,17 @@ EnemyTowerView
 		Gets the radius within which units must be present to contend for 
 		ownership of the Tower after its HP has been reduced to zero
 
+	.. cpp:function:: float GetContentionScore()
+
+		Gets the contention score for this Tower. If positive, the capture
+		is proceeding in your favor, if negative, the enemy is closer to capturing
+		it. It is 0 for Towers that still have some HP left.
+
+	.. cpp:function:: int64_t GetMaxContentionScore()
+
+		The value the contention score must reach for the Tower to be captured by you.
+		If it reaches the negative of this value, the Tower is captured by the enemy.
+
 MagicianView
 ------------
 
@@ -166,11 +204,11 @@ MagicianView
 
 	Provides you with an interface to work with your own Magicians
 
-	.. cpp:function:: GetFireBallTtl()
+	.. cpp:function:: int64_t GetFireBallTtl()
 
 		The time that a FireBall fired by this Magician is alive for
 
-	.. cpp:function:: GetFireBallSpeed()
+	.. cpp:function:: int64_t GetFireBallSpeed()
 
 		Gets the speed of FireBalls that are fired by this Magician
 
@@ -198,16 +236,24 @@ EnemyScoutView
 KingView
 --------
 
-.. cpp:type:: state::UnitView state::KingView
+.. cpp:class:: state::KingView: public state::UnitView
 
 	Provides you with an interface to work with your own Kings
+
+	.. cpp:function:: bool HasFlag()
+
+		Returns ``true`` if your King is carrying the enemy's flag, ``false`` otherwise
 
 EnemyKingView
 -------------
 
-.. cpp:type:: state::EnemyUnitView state::EnemyKingView
+.. cpp:class:: state::EnemyKingView: public state::EnemyUnitView
 
 	Provides you with a restricted interface to work with your enemy's Kings
+
+	.. cpp:function:: bool HasFlag()
+
+		Returns ``true`` if the enemy King is carrying your flag, ``false`` otherwise
 
 FlagView
 --------
@@ -226,13 +272,35 @@ EnemyFlagView
 BaseView
 --------
 
-.. cpp:type:: state::UnitView state::BaseView
+.. cpp:class:: state::BaseView: public state::UnitView
 
 	Provides you with an interface to work with your own Bases
+
+	.. cpp:function:: int64_t GetBasePoisoningRadius()
+
+		Gets the radius within which if an excess of your units are present,
+		you slowly lose points from your score
+
+	.. cpp:function:: int64_t GetBasePoisoningThreshold()
+
+		Gets the poisoning threshold. If the number of your units minus the number
+		of enemy units within the ``base_poisoning_radius`` exceeds this threshold,
+		you slowly lose points from your score
 
 EnemyBaseView
 -------------
 
-.. cpp:type:: state::EnemyUnitView state::EnemyBaseView
+.. cpp:class:: state::EnemyBaseView: public state::EnemyUnitView
 
 	Provides you with a restricted interface to work with your enemy's Bases
+
+	.. cpp:function:: int64_t GetBasePoisoningRadius()
+
+		Gets the radius within which if an excess of the enemy's units are present,
+		the enemy slowly loses points from their score
+
+	.. cpp:function:: int64_t GetBasePoisoningThreshold()
+
+		Gets the poisoning threshold. If the number of the enemy's units minus the number
+		of your units within the ``base_poisoning_radius`` exceeds this threshold,
+		the enemy slowly loses points from its score

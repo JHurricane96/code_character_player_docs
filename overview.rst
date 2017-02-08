@@ -3,7 +3,7 @@ Overview
 
 Welcome to Code Character!
 
-Set in a 2D world, each player is given a an army that can be controlled with
+Set in a 2D world, each player is given an army that can be controlled with
 everyone's favourite programming language, C++ :)
 
 The objective is simple enough. Implement a strategy that allows your army to
@@ -52,15 +52,15 @@ Actors
 Property              Base    Flag    King    Magician  Scout   Swordsman  Tower
 ====================  ======  ======  ======  ========  ======  =========  ======
 Number of units       1       2       1       10        1       20         3
-HP                    \-      \-      400     150       50      200        600
-Can Move              True    False   True    True      True    True       False
+HP                    \-      \-      400     150       300     200        600
+Can Move              False   False   True    True      True    True       False
 Can Attack            False   False   False   True      False   True       True
-Speed                 \-      \-      5       15        20      10         \-
-Attack Power          \-      \-      \-      150       \-      100        300
-Attack Range          \-      \-      \-      10        \-      1          12
-Attack recharge time  \-      \-      \-      10        \-      2          10
-Respawn Time          \-      \-      100     30        10      20         100
-LOS Radius            \-      0       3       11        15      2          15
+Speed                 \-      \-      10      30        37      20         \-
+Attack Power          \-      \-      \-      50        \-      20         80
+Attack Range          \-      \-      \-      600       \-      30         1000
+Attack recharge time  \-      \-      \-      25        \-      10         40
+Respawn Time          \-      \-      100     30        55      20         100
+LOS Radius            5       0       1       3         6       2          5
 ====================  ======  ======  ======  ========  ======  =========  ======
 
 
@@ -133,7 +133,7 @@ The other components include:
 Map
 ---
 
-- The terrain is a 60x60 grid where each element is either a:
+- The terrain is a 30x30 grid where each element is either a:
 
   - Plain
 
@@ -146,6 +146,21 @@ Map
   - Mountain
 
     - Attacking range and visibility increase when units are in the forest
+
+Each element is called a ``TerrainElement`` (See: :cpp:class:`state::TerrainElementView`). Its size is 200x200 units.
+
+There are two ways of addressing TerrainElements: by offsets and by cartesian coordinates.
+
+- Cartesian coordinates:
+    The origin is at the top left corner of the map.
+    Left is increasing X, down is increasing Y.
+
+- Offsets:
+    The origin is at the top left corner of the map.
+    It's a pair, of which the first element is the row number.
+    The second number is the column number.
+    Numbering starts from 0.
+
 
 Line of Sight
 ^^^^^^^^^^^^^
@@ -184,7 +199,7 @@ Game Mechanics
 Progressing
 -----------
 
-The preliminary round will consist of 6 levels each accompanied by an AI of
+The preliminary round will consist of 5 levels each accompanied by an AI of
 increasing intelligence bundled in with the application.
 
 The top 8 teams will progress to the finals where they (or rather their AIs) get
@@ -256,6 +271,8 @@ C++ language Restrictions
   - Files should not be created or read from
 
 - No spawning threads/processes
+
+- Maximum total file size submission is 8 MB
 
 If any of the restrictions are violated, the code will not be evaluated
 
