@@ -51,18 +51,23 @@ Actors
 ====================  ======  ======  ======  ========  ======  =========  ======
 Property              Base    Flag    King    Magician  Scout   Swordsman  Tower
 ====================  ======  ======  ======  ========  ======  =========  ======
-Number of units       1       2       1       10        1       20         3
+Number of units*      1       1       1       10        1       20         3
 HP                    \-      \-      400     150       300     200        600
 Can Move              False   False   True    True      True    True       False
 Can Attack            False   False   False   True      False   True       True
 Speed                 \-      \-      10      30        37      20         \-
 Attack Power          \-      \-      \-      50        \-      20         80
 Attack Range          \-      \-      \-      600       \-      30         1000
-Attack recharge time  \-      \-      \-      25        \-      10         40
-Respawn Time          \-      \-      100     30        55      20         100
-LOS Radius            5       0       1       3         6       2          5
+Attack recharge time  \-      \-      \-      0.83s     \-      0.33s      1.33s
+Respawn Time          \-      \-      7s      2s        3s      1.5s       \-
+LOS Radius**          5       0       1       3         6       2          5
 ====================  ======  ======  ======  ========  ======  =========  ======
 
+| \*  Per team at the start of the game
+|
+| ** LOS Radius is in terms of ``TerrainElements``
+|
+|
 
 There are 4 types of moveable actors that the user can control:
 
