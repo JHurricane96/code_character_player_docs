@@ -250,13 +250,16 @@ Scoring
 =======
 
 - 50 points for capturing the flag, ie, Moving the flag from the enemy base all
-  the way to yours
+  the way to yours.
 - -ve points due to base poisoning.
 
   - Base poisoning is when players are docked points for camping near their base.
   - The ``base_poisoning_threshold`` is the maximum numerical advantage that a
     player can have over his opponent in terms of number of troops positioned
-    near his base for which base poisoning doesn't apply
+    near his base for which base poisoning doesn't apply.
+
+- 1 point per tower every ten seconds you hold it. So holding 2 towers for 15 seconds
+  will net you 3 points.
 
 
 Victory
