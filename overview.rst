@@ -158,7 +158,7 @@ There are two ways of addressing TerrainElements: by offsets and by cartesian co
 
 - Cartesian coordinates:
     The origin is at the top left corner of the map.
-    Left is increasing X, down is increasing Y.
+    Right is increasing X, down is increasing Y.
 
 - Offsets:
     The origin is at the top left corner of the map.
