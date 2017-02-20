@@ -1,6 +1,24 @@
 Utilities
 =========
 
+Logging
+-------
+
+.. cpp:function:: void ipc::Logger::Instance().SetLogs(log)
+
+	Logs the given string to the renderer console
+
+	**Parameters:**
+
+		.. cpp:var:: std::string log
+
+			The string to print on the console
+
+	.. highlight:: cpp
+	Example usage::
+
+		ipc::Logger::Instance().SetLogs("Units are attacking!");
+
 Actor ID
 --------
 
