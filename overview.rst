@@ -204,11 +204,13 @@ Game Mechanics
 Progressing
 -----------
 
-The preliminary round will consist of 5 levels each accompanied by an AI of
+The preliminary round will consist of 3 levels each accompanied by an AI of
 increasing intelligence bundled in with the application.
 
-The top 8 teams will progress to the finals where they (or rather their AIs) get
-to face off against each other in a bloody brawl.
+The second round has been cancelled. The top three in the leaderboard in round 1
+get prizes.
+
+The event ends on March 5th, at 23:59 hours.
 
 Execution Order
 ---------------
